@@ -1,0 +1,32 @@
+unit UntLançamentos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm;
+
+type
+  TFrmlançamentos = class(TUnimForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function Frmlançamentos: TFrmlançamentos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function Frmlançamentos: TFrmlançamentos;
+begin
+  Result := TFrmlançamentos(UniMainModule.GetFormInstance(TFrmlançamentos));
+end;
+
+end.

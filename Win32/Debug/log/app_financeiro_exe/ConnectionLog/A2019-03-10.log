@@ -1,0 +1,4 @@
+APP_FINANCEIRO.exe: 00000A04: 22:35:42 [192.168.43.251]:Failed Sequence Recovery: SeqId: 6, Event: tap
+APP_FINANCEIRO.exe: 00000A04: 22:35:44 [192.168.43.251]:Sequence sent from cache:  SeqId: 6
+APP_FINANCEIRO.exe: 00000A04: 22:35:44 [192.168.43.251]:Processed: Id: 6, Evt: tap, [TJBoDKg5By1037D0C49]
+APP_FINANCEIRO.exe: 00001C54: 23:26:13 [192.168.43.251]:Failed Sequence Recovery: SeqId: 10, Event: tap

@@ -1,0 +1,5 @@
+APP_FINANCEIRO.exe: 00000AE4: 22:24:07 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000AE4: 22:24:07 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000AE4: 22:24:07 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+APP_FINANCEIRO.exe: 00000AE4: 22:24:08 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000AE4: 22:24:08 [TUniServerModule]:HTTP Server Started on Port: 8077

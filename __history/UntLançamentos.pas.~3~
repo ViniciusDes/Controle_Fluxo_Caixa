@@ -1,0 +1,44 @@
+unit UntLançamentos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Data.DBXFirebird, Data.FMTBcd, Data.DB, Datasnap.DBClient, Datasnap.Provider,
+  Data.SqlExpr;
+
+type
+  TFrmlançamentos = class(TUnimForm)
+    ConectionCaixaMov: TSQLConnection;
+    QueryCaixaMov: TSQLQuery;
+    ProviderCaixaMov: TDataSetProvider;
+    DataSetMov: TClientDataSet;
+    SourceCaixaMov: TDataSource;
+    Conection: TSQLConnection;
+    SQLQuery2: TSQLQuery;
+    DataSetProvider2: TDataSetProvider;
+    ClientDataSet2: TClientDataSet;
+    DataSource2: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function Frmlançamentos: TFrmlançamentos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function Frmlançamentos: TFrmlançamentos;
+begin
+  Result := TFrmlançamentos(UniMainModule.GetFormInstance(TFrmlançamentos));
+end;
+
+end.

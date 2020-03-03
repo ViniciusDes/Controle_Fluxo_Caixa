@@ -1,0 +1,21 @@
+APP_FINANCEIRO.exe: 00001804: 23:39:56 [192.168.43.251]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 00000670: 23:39:58 [192.168.43.251]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 000007CC: 23:39:58 [192.168.43.251]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 00001358: 23:39:58 [192.168.43.251]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 00001804: 23:39:58 [192.168.43.251]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 00001804: 23:39:58 [192.168.43.251]:Processed: Id: 2, Evt: tap, [oOAwoS4YG2103632C6F]
+APP_FINANCEIRO.exe: 00000670: 23:39:58 [192.168.43.251]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 00000670: 23:39:59 [192.168.43.251]:Processed: Id: 2, Evt: tap, [oOAwoS4YG2103632C6F]
+APP_FINANCEIRO.exe: 000007CC: 23:39:59 [192.168.43.251]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 000007CC: 23:39:59 [192.168.43.251]:Processed: Id: 2, Evt: tap, [oOAwoS4YG2103632C6F]
+APP_FINANCEIRO.exe: 00001358: 23:40:00 [192.168.43.251]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 00001358: 23:40:00 [192.168.43.251]:Processed: Id: 2, Evt: tap, [oOAwoS4YG2103632C6F]
+APP_FINANCEIRO.exe: 000019D8: 23:40:01 [192.168.43.251]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 000019D8: 23:40:01 [192.168.43.251]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 000019D8: 23:40:01 [192.168.43.251]:Processed: Id: 2, Evt: tap, [oOAwoS4YG2103632C6F]
+APP_FINANCEIRO.exe: 00000DC4: 23:43:25 [192.168.43.1]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 00001218: 23:43:25 [192.168.43.1]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 00000DC4: 23:43:25 [192.168.43.1]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 00000DC4: 23:43:25 [192.168.43.1]:Processed: Id: 2, Evt: tap, [9KqMM88LHG103632DD0]
+APP_FINANCEIRO.exe: 00001218: 23:43:25 [192.168.43.1]:Sequence sent from cache:  SeqId: 2
+APP_FINANCEIRO.exe: 00001218: 23:43:25 [192.168.43.1]:Processed: Id: 2, Evt: tap, [9KqMM88LHG103632DD0]

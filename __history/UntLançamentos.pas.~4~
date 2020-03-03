@@ -1,0 +1,72 @@
+unit UntLançamentos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Data.DBXFirebird, Data.FMTBcd, Data.DB, Datasnap.DBClient, Datasnap.Provider,
+  Data.SqlExpr;
+
+type
+  TFrmlançamentos = class(TUnimForm)
+    ConectionCaixaMov: TSQLConnection;
+    QueryCaixaMov: TSQLQuery;
+    ProviderCaixaMov: TDataSetProvider;
+    DataSetMov: TClientDataSet;
+    SourceCaixaMov: TDataSource;
+    ConectionContas: TSQLConnection;
+    QueryContas: TSQLQuery;
+    ProviderContas: TDataSetProvider;
+    DataSetContas: TClientDataSet;
+    SourseContas: TDataSource;
+    DataSetMovID: TIntegerField;
+    DataSetMovID_CAIXA: TIntegerField;
+    DataSetMovDATA_MOV: TSQLTimeStampField;
+    DataSetMovHISTORICO: TStringField;
+    DataSetMovORIGEM: TStringField;
+    DataSetMovDC: TStringField;
+    DataSetMovVALOR: TFloatField;
+    DataSetMovIDFUNC: TIntegerField;
+    DataSetMovSALDO_ANTERIOR: TFloatField;
+    DataSetMovIDPLANO: TIntegerField;
+    DataSetMovIDSUBPLANO: TIntegerField;
+    DataSetMovDESC_SUBPLANO: TStringField;
+    DataSetMovSALDO_POSTERIOR: TFloatField;
+    DataSetMovHORA_MOV: TSQLTimeStampField;
+    QueryCaixaMovID: TIntegerField;
+    QueryCaixaMovID_CAIXA: TIntegerField;
+    QueryCaixaMovDATA_MOV: TSQLTimeStampField;
+    QueryCaixaMovHISTORICO: TStringField;
+    QueryCaixaMovORIGEM: TStringField;
+    QueryCaixaMovDC: TStringField;
+    QueryCaixaMovVALOR: TFloatField;
+    QueryCaixaMovIDFUNC: TIntegerField;
+    QueryCaixaMovSALDO_ANTERIOR: TFloatField;
+    QueryCaixaMovIDPLANO: TIntegerField;
+    QueryCaixaMovIDSUBPLANO: TIntegerField;
+    QueryCaixaMovDESC_SUBPLANO: TStringField;
+    QueryCaixaMovSALDO_POSTERIOR: TFloatField;
+    QueryCaixaMovHORA_MOV: TSQLTimeStampField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function Frmlançamentos: TFrmlançamentos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function Frmlançamentos: TFrmlançamentos;
+begin
+  Result := TFrmlançamentos(UniMainModule.GetFormInstance(TFrmlançamentos));
+end;
+
+end.

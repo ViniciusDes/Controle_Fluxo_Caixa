@@ -1,0 +1,16 @@
+APP_FINANCEIRO.exe: 00000E50: 22:19:44 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000E50: 22:19:44 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000E50: 22:19:45 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000E50: 22:19:45 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001128: 22:20:48 [HandleFileRequest[192.168.43.1]]:File not found: C:\SISTEMA ETICA\Win32\Release\favicon.ico
+APP_FINANCEIRO.exe: 00000E50: 22:23:36 [TUniServerModule]:Shutting Down Server.
+APP_FINANCEIRO.exe: 00000E50: 22:23:36 [TUniServerModule]:Stopping HTTP Server.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniServerModule]:HTTP Server Stopped.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniGUISessionManager]:Terminating Session manager.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniGUISessionManager]:Stopping Cache Eraser...
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniGUISessionManager]:Cache Eraser Stopped.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniGUISessionManager]:Destroying Worker Threads.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniGUISessionManager]:Session manager terminated.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [TUniServerModule]:Server Shutdown Completed.
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 []:<-------------------------------------------------------------->
+APP_FINANCEIRO.exe: 00000E50: 22:23:37 [Terminated]:Exit Code: 0

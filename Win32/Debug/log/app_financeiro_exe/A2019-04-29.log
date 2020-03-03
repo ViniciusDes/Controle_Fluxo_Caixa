@@ -1,0 +1,7 @@
+APP_FINANCEIRO.exe: 00000B00: 17:22:29 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000B00: 17:22:29 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000B00: 17:22:29 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000B00: 17:22:29 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00000B00: 17:22:30 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000B00: 17:22:30 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001014: 17:22:41 [HandleFileRequest[192.168.25.97]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico

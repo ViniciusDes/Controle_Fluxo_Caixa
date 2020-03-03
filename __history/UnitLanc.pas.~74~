@@ -1,0 +1,651 @@
+unit UnitLanc;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Data.DBXFirebird, Data.FMTBcd, Data.DB, Datasnap.DBClient, Datasnap.Provider,
+  Data.SqlExpr, uniMultiItem, unimSelect, unimDBSelect, uniGUIBaseClasses,
+  uniEdit, uniDBEdit, unimDBEdit, uniBasicGrid, uniDBGrid, unimDBListGrid,
+  unimDBGrid, uniLabel, unimLabel, uniButton, uniBitBtn, unimBitBtn, unimEdit,
+  uniDateTimePicker, uniDBDateTimePicker, unimDBDatePicker;
+
+type
+  TFrmLancamentos = class(TUnimForm)
+    SQLQuery1: TSQLQuery;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DataSource1: TDataSource;
+    ClientDataSet1ID: TIntegerField;
+    ClientDataSet1DESCRICAO: TStringField;
+    ClientDataSet1EMPRESA: TIntegerField;
+    ClientDataSet1SALDO: TFloatField;
+    ClientDataSet1NAO_EXIBIR_REL: TStringField;
+    UnimLabel1: TUnimLabel;
+    UnimLabel2: TUnimLabel;
+    UnimLabel3: TUnimLabel;
+    BtnSalvarTransf: TUnimBitBtn;
+    UnimDBDatePicker1: TUnimDBDatePicker;
+    QueryCaixaMov: TSQLQuery;
+    ProviderCaixaMov: TDataSetProvider;
+    SourceCaixaMov: TDataSource;
+    QueryCaixaMovID: TIntegerField;
+    QueryCaixaMovID_CAIXA: TIntegerField;
+    QueryCaixaMovDATA_MOV: TSQLTimeStampField;
+    QueryCaixaMovHISTORICO: TStringField;
+    QueryCaixaMovORIGEM: TStringField;
+    QueryCaixaMovDC: TStringField;
+    QueryCaixaMovVALOR: TFloatField;
+    QueryCaixaMovIDFUNC: TIntegerField;
+    QueryCaixaMovSALDO_ANTERIOR: TFloatField;
+    QueryCaixaMovIDPLANO: TIntegerField;
+    QueryCaixaMovIDSUBPLANO: TIntegerField;
+    QueryCaixaMovDESC_SUBPLANO: TStringField;
+    QueryCaixaMovSALDO_POSTERIOR: TFloatField;
+    QueryCaixaMovHORA_MOV: TSQLTimeStampField;
+    QueryFunc: TSQLQuery;
+    ProviderFunc: TDataSetProvider;
+    SourceFunc: TDataSource;
+    QueryFuncID: TIntegerField;
+    QueryFuncNOME: TStringField;
+    QueryFuncENDERECO: TStringField;
+    QueryFuncNUMERO: TStringField;
+    QueryFuncBAIRRO: TStringField;
+    QueryFuncCIDADE: TStringField;
+    QueryFuncCEP: TStringField;
+    QueryFuncUF: TStringField;
+    QueryFuncTELEFONE: TStringField;
+    QueryFuncTELEFAX: TStringField;
+    QueryFuncCELULAR: TStringField;
+    QueryFuncCNPJ_CPF: TStringField;
+    QueryFuncINSC_RG: TStringField;
+    QueryFuncFILIACAO_PAI: TStringField;
+    QueryFuncFILIACAO_MAE: TStringField;
+    QueryFuncDATA_NASC: TSQLTimeStampField;
+    QueryFuncDATA_ADMISSAO: TSQLTimeStampField;
+    QueryFuncDATA_DEMISSAO: TSQLTimeStampField;
+    QueryFuncSALARIO: TFloatField;
+    QueryFuncCOMISSAO: TStringField;
+    QueryFuncPERC_COMISSAO: TFloatField;
+    QueryFuncATIVO: TStringField;
+    QueryFuncOBSERVACOES: TMemoField;
+    QueryFuncEMAIL: TStringField;
+    QueryFuncTIPO: TIntegerField;
+    QueryFuncTIPO_COM: TIntegerField;
+    QueryFuncCONTA_MOVIMENTO: TIntegerField;
+    ClientDatasetFunc: TClientDataSet;
+    ClientDatasetFuncID: TIntegerField;
+    ClientDatasetFuncNOME: TStringField;
+    ClientDatasetFuncENDERECO: TStringField;
+    ClientDatasetFuncNUMERO: TStringField;
+    ClientDatasetFuncBAIRRO: TStringField;
+    ClientDatasetFuncCIDADE: TStringField;
+    ClientDatasetFuncCEP: TStringField;
+    ClientDatasetFuncUF: TStringField;
+    ClientDatasetFuncTELEFONE: TStringField;
+    ClientDatasetFuncTELEFAX: TStringField;
+    ClientDatasetFuncCELULAR: TStringField;
+    ClientDatasetFuncCNPJ_CPF: TStringField;
+    ClientDatasetFuncINSC_RG: TStringField;
+    ClientDatasetFuncFILIACAO_PAI: TStringField;
+    ClientDatasetFuncFILIACAO_MAE: TStringField;
+    ClientDatasetFuncDATA_NASC: TSQLTimeStampField;
+    ClientDatasetFuncDATA_ADMISSAO: TSQLTimeStampField;
+    ClientDatasetFuncDATA_DEMISSAO: TSQLTimeStampField;
+    ClientDatasetFuncSALARIO: TFloatField;
+    ClientDatasetFuncCOMISSAO: TStringField;
+    ClientDatasetFuncPERC_COMISSAO: TFloatField;
+    ClientDatasetFuncATIVO: TStringField;
+    ClientDatasetFuncOBSERVACOES: TMemoField;
+    ClientDatasetFuncEMAIL: TStringField;
+    ClientDatasetFuncTIPO: TIntegerField;
+    ClientDatasetFuncTIPO_COM: TIntegerField;
+    ClientDatasetFuncCONTA_MOVIMENTO: TIntegerField;
+    DataSetCaixaMov: TClientDataSet;
+    DataSetCaixaMovID: TIntegerField;
+    DataSetCaixaMovID_CAIXA: TIntegerField;
+    DataSetCaixaMovDATA_MOV: TSQLTimeStampField;
+    DataSetCaixaMovHISTORICO: TStringField;
+    DataSetCaixaMovORIGEM: TStringField;
+    DataSetCaixaMovDC: TStringField;
+    DataSetCaixaMovVALOR: TFloatField;
+    DataSetCaixaMovIDFUNC: TIntegerField;
+    DataSetCaixaMovSALDO_ANTERIOR: TFloatField;
+    DataSetCaixaMovIDPLANO: TIntegerField;
+    DataSetCaixaMovIDSUBPLANO: TIntegerField;
+    DataSetCaixaMovDESC_SUBPLANO: TStringField;
+    DataSetCaixaMovSALDO_POSTERIOR: TFloatField;
+    DataSetCaixaMovHORA_MOV: TSQLTimeStampField;
+    DbeditValor: TUnimDBEdit;
+    DbEditHistorico: TUnimDBEdit;
+    UnimLabel4: TUnimLabel;
+    SQLQuery1ID: TIntegerField;
+    SQLQuery1DESCRICAO: TStringField;
+    SQLQuery1EMPRESA: TIntegerField;
+    SQLQuery1SALDO: TFloatField;
+    SQLQuery1NAO_EXIBIR_REL: TStringField;
+    QueryConfig: TSQLQuery;
+    ProviderConfig: TDataSetProvider;
+    DataSetConfig: TClientDataSet;
+    SourceConfig: TDataSource;
+    QueryConfigID_EMPRESA: TIntegerField;
+    QueryConfigPERC_LUCRO_VAREJO: TFloatField;
+    QueryConfigCUSTO_FIXO: TFloatField;
+    QueryConfigPERC_LUCRO_ATACADO: TFloatField;
+    QueryConfigCOMISSAO: TFloatField;
+    QueryConfigFRETE: TFloatField;
+    QueryConfigOUTROS_IMPOSTOS: TFloatField;
+    QueryConfigFABRICANTE: TStringField;
+    QueryConfigMARCA: TStringField;
+    QueryConfigMODELO: TStringField;
+    QueryConfigNUMERO: TStringField;
+    QueryConfigSERIE: TStringField;
+    QueryConfigVOLTS: TStringField;
+    QueryConfigTDDINHEIRO: TIntegerField;
+    QueryConfigTDCARTAO: TIntegerField;
+    QueryConfigTDCHEQUE: TIntegerField;
+    QueryConfigTDOUTRAS: TIntegerField;
+    QueryConfigSIMPLES: TFloatField;
+    QueryConfigICMS: TFloatField;
+    QueryConfigIDPLANODINHEIRO: TIntegerField;
+    QueryConfigIDPLANOCHEQUE: TIntegerField;
+    QueryConfigIDPLANOCARTAO: TIntegerField;
+    QueryConfigIDPLANOCARTEIRA: TIntegerField;
+    QueryConfigIDPLANOCARNE: TIntegerField;
+    QueryConfigIDPLANOBOLETO: TIntegerField;
+    QueryConfigIDPLANOOUTROS: TIntegerField;
+    QueryConfigIDPLANOGERAL: TIntegerField;
+    QueryConfigIDSUBPLANODINHEIRO: TIntegerField;
+    QueryConfigIDSUBPLANOCHEQUE: TIntegerField;
+    QueryConfigIDSUBPLANOCARTAO: TIntegerField;
+    QueryConfigIDSUBPLANOCARTEIRA: TIntegerField;
+    QueryConfigIDSUBPLANOCARNE: TIntegerField;
+    QueryConfigIDSUBPLANOBOLETO: TIntegerField;
+    QueryConfigIDSUBPLANOOUTROS: TIntegerField;
+    QueryConfigIDSUBPLANOGERAL: TIntegerField;
+    QueryConfigPV_PIS: TFloatField;
+    QueryConfigPV_COFINS: TFloatField;
+    QueryConfigPV_CSLL: TFloatField;
+    QueryConfigPV_IR: TFloatField;
+    QueryConfigPV_DESCONTO_ENT: TFloatField;
+    QueryConfigPV_FINANCEIRO_ENT: TFloatField;
+    QueryConfigPV_ICMS_ENT: TFloatField;
+    QueryConfigPV_IPI_ENT: TFloatField;
+    QueryConfigPV_FRETE_ENT: TFloatField;
+    QueryConfigPV_OUTROS_ENT: TFloatField;
+    QueryConfigUTILIZA_DESCONTO_ITEM: TStringField;
+    QueryConfigUTILIZA_DESCONTOMAXIMO_ITEM: TStringField;
+    QueryConfigN_REIMPRESSAO: TStringField;
+    QueryConfigUTILIZA_GRADE_PRODUTOS: TStringField;
+    QueryConfigVER_PROD_S_PRECOVENDA: TStringField;
+    QueryConfigIDPLANOTRANSFERENCIA: TIntegerField;
+    QueryConfigIDSUBPLANOTRANSFERENCIA: TIntegerField;
+    QueryConfigUTILIZA_VARIAS_FORMAPAG: TStringField;
+    QueryConfigVINCULA_FINAN_PEDIDONOTA: TStringField;
+    QueryConfigAPARECER_CONSIGNADO_CUPOM: TStringField;
+    QueryConfigIDCLASSIFICACAOGERAPEDIDO: TIntegerField;
+    QueryConfigBLOQUEIA_RETRPED_LIQ: TStringField;
+    QueryConfigDES_PESQUISADINAMICA: TStringField;
+    QueryConfigEDIT_DESC_PRODUTO_PADRAO: TStringField;
+    QueryConfigNAO_CALCULA_ICMS_SINTEGRA: TStringField;
+    QueryConfigPREENCHE_DADOS_PADRAO: TStringField;
+    QueryConfigAGRUPA_ITENS_PEDIDO: TStringField;
+    QueryConfigIDPLANOCANCELAMENTO: TIntegerField;
+    QueryConfigIDSUBPLANOCANCELAMENTO: TIntegerField;
+    QueryConfigIMP_N_PEDIDO_CUPOMFISCAL: TStringField;
+    QueryConfigCONTAFIXANABAIXADECONTAS: TStringField;
+    QueryConfigVINCULA_REFERENCIA_EAN13: TStringField;
+    QueryConfigVISUALIZA_VENDAS_CAIXA: TStringField;
+    QueryConfigNAO_UTILIZA_EXCECAO_ISENTO: TStringField;
+    QueryConfigBLOQUEIA_CANCELAMENTO_MEIOVEND: TStringField;
+    QueryConfigFECHAR_CUPOM_REIMPRESSAO: TStringField;
+    QueryConfigEAN_PRODUTO: TIntegerField;
+    QueryConfigUTILIZA_COD_BAL_UNID: TStringField;
+    QueryConfigTIPO_IMP_PADRAO_RD: TStringField;
+    QueryConfigIMPRIME_COMP_QUIT: TStringField;
+    QueryConfigINFORMA_OBS_CANCELAMENTO_PDV: TStringField;
+    QueryConfigVENDA_ATACADOVAREJO_UNICA: TStringField;
+    QueryConfigQTDE_VIAS_PEDIDO: TIntegerField;
+    QueryConfigID_CLASSIFICACAO_COTACAO: TIntegerField;
+    QueryConfigID_CONTROLE_COTACAO: TIntegerField;
+    QueryConfigNAO_EXIBE_MSG_VAREJOATACADO: TStringField;
+    QueryConfigPERMITE_ESCOLHER_FP_TELASUP: TStringField;
+    QueryConfigIMPRIMIR_DOC_AUX_APOS_VENDA: TStringField;
+    QueryConfigVISUALIZA_PRECO_ATE_DESCONTO: TStringField;
+    QueryConfigIMPRIME_PEDIDO_FIN_VENDA: TStringField;
+    QueryConfigNAO_PERMITE_ENTRADA_EAN_XML: TStringField;
+    QueryConfigQTDELINHASPEDIDOPEQUENO: TIntegerField;
+    QueryConfigIMPRIME_ECF_REMOTO: TStringField;
+    QueryConfigATU_JUROS_AUTOMATICO: TStringField;
+    QueryConfigCODIGO_SEQ_ALFA: TStringField;
+    QueryConfigPEDIDO_MATRICIAL_GRANDE: TStringField;
+    QueryConfigVIS_VENDASPED_TELASUP: TStringField;
+    QueryConfigTIPO_REGIME: TIntegerField;
+    QueryConfigPERC_PIS: TFloatField;
+    QueryConfigVALOR_COFINS: TFloatField;
+    QueryConfigPERC_JUROS: TFloatField;
+    QueryConfigVALOR_MULTA: TFloatField;
+    QueryConfigAGRUPA_ITENS_GERA_NF: TStringField;
+    QueryConfigID_CONTATO: TIntegerField;
+    QueryConfigATUALIZA_PESQ_PRODUTOS: TStringField;
+    QueryConfigCPF_CLIENTE_OBRIGATORIO: TStringField;
+    QueryConfigNAO_AGRP_ITENS_ACERTOCONSI: TStringField;
+    QueryConfigLER_DADOS_APOSREDZ: TStringField;
+    QueryConfigUTILIZA_CREDITO_PREPAGO: TStringField;
+    QueryConfigEXIBE_SALDOPOSTERIOR_CAIXA: TStringField;
+    QueryConfigINFORMA_SENHA_OPCIONAL: TStringField;
+    QueryConfigHAB_FT_BAIXA_TIPODOC: TStringField;
+    QueryConfigHAB_FT_BAIXA_SERIE: TStringField;
+    QueryConfigHAB_FT_BAIXA_DTVENC: TStringField;
+    QueryConfigHAB_FT_BAIXA_TIPO: TStringField;
+    QueryConfigVALOR_OUTRAS_SINTEGRA: TStringField;
+    QueryConfigTENTA_RECUPERAR_VENDA: TStringField;
+    QueryConfigCHECA_ESTOQUE_FINALIZAR: TStringField;
+    QueryConfigTAXA_ADM: TFloatField;
+    QueryConfigUTILIZA_CATRACA: TStringField;
+    QueryConfigIP_CATRACA: TStringField;
+    QueryConfigPORTA_CATRACA: TStringField;
+    QueryConfigDIAS_PARA_BLOQUEIO: TIntegerField;
+    QueryConfigMODELO_CARNE: TStringField;
+    QueryConfigNAO_UTILIZA_VENDEDOR_CLIENTE: TStringField;
+    QueryConfigMOV_PROD_COMPOSTO_ENT_SAI: TStringField;
+    QueryConfigMSG_CUPOM: TStringField;
+    QueryConfigIMPR_MSG_ACRES: TStringField;
+    QueryConfigACRESC_PERC: TFloatField;
+    QueryConfigOBRIGA_VENDA_CARTAO: TStringField;
+    QueryConfigCUPOM_EM_LOTE: TStringField;
+    QueryConfigVERIFICA_DEBITO_CLIENTE_PED: TStringField;
+    QueryConfigIMP_OBS_PEDIDO_CUPOM: TStringField;
+    QueryConfigNAO_CALC_ICMSSAIDA_SINTEGRA: TStringField;
+    QueryConfigNAO_ZERAVALOR5929_SINTEGRA: TStringField;
+    QueryConfigPRECO_ATACADO_FIXO: TStringField;
+    QueryConfigNAO_CALCULA_ICMSREG54_SINTEGRA: TStringField;
+    QueryConfigUTILIZA_PEDIDO_AUX: TStringField;
+    QueryConfigQTDE_VENDAS_F8: TIntegerField;
+    QueryConfigIMPRIMIR_LIMITE_COMP: TStringField;
+    QueryConfigOBSERVACAO_PEDIDO: TStringField;
+    QueryConfigPERC_ACRESC_TIPODOC2: TFloatField;
+    QueryConfigPERC_ACRESC_TIPODOC6: TFloatField;
+    QueryConfigPERC_ACRESC_TIPODOC3: TFloatField;
+    QueryConfigCODIGO_SEQ_GRADE: TStringField;
+    QueryConfigMOV_EST_PRODCOMP: TStringField;
+    DataSetConfigID: TIntegerField;
+    DataSetConfigID_CAIXA: TIntegerField;
+    DataSetConfigDATA_MOV: TSQLTimeStampField;
+    DataSetConfigHISTORICO: TStringField;
+    DataSetConfigORIGEM: TStringField;
+    DataSetConfigDC: TStringField;
+    DataSetConfigVALOR: TFloatField;
+    DataSetConfigIDFUNC: TIntegerField;
+    DataSetConfigSALDO_ANTERIOR: TFloatField;
+    DataSetConfigIDPLANO: TIntegerField;
+    DataSetConfigIDSUBPLANO: TIntegerField;
+    DataSetConfigDESC_SUBPLANO: TStringField;
+    DataSetConfigSALDO_POSTERIOR: TFloatField;
+    DataSetConfigHORA_MOV: TSQLTimeStampField;
+    ClientDataSet2: TClientDataSet;
+    IntegerField1: TIntegerField;
+    StringField1: TStringField;
+    IntegerField2: TIntegerField;
+    FloatField1: TFloatField;
+    StringField2: TStringField;
+    DataSource2: TDataSource;
+    UnimSelect1: TUnimSelect;
+    UnimSelect2: TUnimSelect;
+    BtnIniciarTransf: TUnimBitBtn;
+    procedure BtnSalvarTransfClick(Sender: TObject);
+    procedure BtnIniciarTransfClick(Sender: TObject);
+    procedure AtivaDataSet;
+    procedure DesativaDataSet;
+    procedure UnimFormShow(Sender: TObject);
+    PROCEDURE AtualizaSaldo(xSaldo: double; PidConta: integer);
+    procedure UnimFormCreate(Sender: TObject);
+
+  private
+
+  //function RetornIDCaixa(pCaixa: string): integer;
+  function RetornIDFUnc(PidFunc: integer):integer;
+  function SomarSaldoAnterior(pSaldo:integer):double;
+  function RetornIdPlano: integer;
+  function RetornIdSubplano : integer;
+  function DescSubPlano (Psubplano: integer): string;
+  function DebitarSaldo: double;
+  function SomarSaldo : double;
+    { Private declarations }
+  public
+  function GenID(pTabela :string):integer;
+  function RetornIDCaixa(pCaixa: string): integer;
+    { Public declarations }
+  end;
+  var
+  dData : Tdate;
+  DescConta1: string;
+  DescConta2 : string;
+  idConta1 : integer;
+  idConta2 : integer;
+  idFunc1: integer;
+  idFunc2: integer;
+  IdSubPlano : integer;
+  ValorAnt1 : double;
+  ValorAnt2 :double;
+  ValorInf : Double;
+  ValorTotalConta1 : double;
+  ValorTotalConta2 : double;
+
+
+function FrmLancamentos: TFrmLancamentos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, mainm;
+
+function FrmLancamentos: TFrmLancamentos;
+begin
+  Result := TFrmLancamentos(UniMainModule.GetFormInstance(TFrmLancamentos));
+end;
+
+procedure TFrmLancamentos.BtnIniciarTransfClick(Sender: TObject);
+begin
+    AtivaDataSet;
+
+    Frmlancamentos.DataSetCaixaMov.Insert;
+    dData := date();
+    UnimDBDatePicker1.Date := dData;
+    DataSetCaixaMov.FieldByName('ID').AsInteger := GenID('CAIXA_MOV');
+    DataSetCaixaMov.FieldByName('DATA_MOV').AsDateTime :=  UnimDBDatePicker1.Date;
+    BtnIniciarTransf.Enabled := false;
+    BtnSalvarTransf.Enabled := true;
+
+
+end;
+
+procedure TFrmLancamentos.BtnSalvarTransfClick(Sender: TObject);
+
+begin
+  {if Application.o('Deseja transferir o Valor?','AVISO',mb_yesno + mb_iconquestion) = id_yes
+ then
+ if MessageDlg('Dialog3', mtConfirmation, mbYesNo) = mrNo then}
+  DescConta1 := UnimSelect1.Text;
+   DescConta2 := UnimSelect2.Text;
+   idConta1 := RetornIDCaixa(DescConta1); // variavel recebe id conta 1
+   idConta2 := RetornIDCaixa(DescConta2); // variavel recebe id conta 2
+   IdSubPlano := RetornIdSubplano;
+   idFunc1 :=  RetornIDFUnc(idConta1);
+   idFunc2 :=  RetornIDFUnc(idConta2);
+   ValorAnt1 := SomarSaldoAnterior(idConta1);
+   ValorAnt2 := SomarSaldoAnterior(idConta2);
+   ValorInf := (strtofloat(DbeditValor.Text));
+   DataSetCaixaMov.FieldByName('SALDO_ANTERIOR').AsFloat := SomarSaldoAnterior(idConta1);  //APENAS VER O VALOR DA CONTA 1
+   ValorTotalConta1 := DebitarSaldo; //DEBITANDO O VALOR DA PRIMEIRA CONTA, PASSANDO PRA VARIAVEL
+   AtualizaSaldo(ValorTotalConta1,idConta1);
+   DataSetCaixaMov.FieldByName('ID_CAIXA').AsInteger := RetornIDCaixa(DescConta1);
+   DataSetCaixaMov.FieldByName('IDFUNC').AsInteger := idFunc1; //variavel com id funcionario
+   if RetornIDFUnc(idConta1) = 0 then
+   begin
+    DataSetCaixaMov.FieldByName('IDFUNC').AsInteger := 2;
+   end;
+
+     //debitando uma conta
+   if DbEditHistorico.Text = '' then
+   begin
+    DataSetCaixaMov.FieldByName('HISTORICO').AsString := 'TRANSFERENCIA';
+   end
+   else
+   DataSetCaixaMov.FieldByName('HISTORICO').Asstring := DbEditHistorico.Text;
+   DataSetCaixaMov.FieldByName('ORIGEM').Asstring := UnimSelect1.Text;
+   DataSetCaixaMov.FieldByName('DC').Asstring := 'D';
+
+   DataSetCaixaMov.FieldByName('IDPLANO').AsInteger := RetornIdPlano;
+   DataSetCaixaMov.FieldByName('IDSUBPLANO').AsInteger := RetornIdSubplano;
+   DataSetCaixaMov.FieldByName('DESC_SUBPLANO').AsString := DescSubPlano(IdSubPlano);
+   DataSetCaixaMov.FieldByName('SALDO_POSTERIOR').AsFloat := DebitarSaldo ;
+   DataSetCaixaMov.FieldByName('HORA_MOV').AsDateTime := (StrToDateTime(TimeToStr(Time)));
+  // ShowMessage(floattostr(DebitarSaldo));
+    DataSetCaixaMov.Post;
+
+     //adcionando na outra conta
+  DataSetCaixaMov.Open;
+  DataSetCaixaMov.Insert;
+  dData := date();
+  UnimDBDatePicker1.Date := dData;
+  DataSetCaixaMov.FieldByName('SALDO_ANTERIOR').AsFloat := SomarSaldoAnterior(idConta2); //APENAS VER O VALOR DA CONTA 2
+  ValorTotalConta2 := SomarSaldo;
+  AtualizaSaldo(ValorTotalConta2,idConta2);
+  DataSetCaixaMov.FieldByName('ID').AsInteger := GenID('CAIXA_MOV');
+  DataSetCaixaMov.FieldByName('DATA_MOV').AsDateTime :=  UnimDBDatePicker1.date;
+  DataSetCaixaMov.FieldByName('ID_CAIXA').AsInteger := RetornIDCaixa(DescConta2);
+  DataSetCaixaMov.FieldByName('IDFUNC').AsInteger := idFunc2; //variavel com id funcionario
+  if RetornIDFUnc(idConta2) = 0 then
+  begin
+    DataSetCaixaMov.FieldByName('IDFUNC').AsInteger := 2;
+  end;
+   if DbEditHistorico.Text = '' then
+   begin
+    DataSetCaixaMov.FieldByName('HISTORICO').AsString := 'TRANSFERENCIA';
+   end
+   else
+   DataSetCaixaMov.FieldByName('HISTORICO').Asstring := DbEditHistorico.Text;
+   DataSetCaixaMov.FieldByName('ORIGEM').Asstring := UnimSelect2.Text;
+   DataSetCaixaMov.FieldByName('DC').Asstring := 'C';
+
+   DataSetCaixaMov.FieldByName('IDPLANO').AsInteger := RetornIdPlano;
+   DataSetCaixaMov.FieldByName('IDSUBPLANO').AsInteger := RetornIdSubplano;
+   DataSetCaixaMov.FieldByName('DESC_SUBPLANO').AsString := DescSubPlano(IdSubPlano);
+   DataSetCaixaMov.FieldByName('SALDO_POSTERIOR').AsFloat := SomarSaldo;
+   DataSetCaixaMov.FieldByName('HORA_MOV').AsDateTime := (StrToDateTime(TimeToStr(Time)));
+   DataSetCaixaMov.FieldByName('VALOR').AsFloat := ValorInf;
+   DataSetCaixaMov.Post;
+   DataSetCaixaMov.ApplyUpdates(0);
+   BtnIniciarTransf.Enabled := true;
+   ShowMessage('Transferência concluida!');
+   FrmLancamentos.Close;
+   DesativaDataSet;
+  // FreeAndNil(FrmLancamentos);
+
+end;
+
+function TFrmLancamentos.GenID(pTabela :string):integer;
+  var Q: TSqlQuery;
+  begin
+    Q := TSqlQuery.Create(nil);
+    begin
+      try
+        Q.SQLConnection := MainmFormLogin.conexao;
+        Q.Sql.Add('select gen_id('+Ptabela+'_ID,1) FROM RDB$DATABASE');
+        Q.OPEN;
+        Result := Q.FieldByName('GEN_ID').AsInteger;
+      finally
+      freeandnil(Q)
+
+      end;
+    end;
+  end;
+
+
+
+     function TFrmLancamentos.RetornIDCaixa(pCaixa: string): integer;
+  var Q : TSQLQuery;
+
+ begin  //Retornar Id Funcionario
+  Q := TSQLQuery.Create(nil);
+    begin
+
+       try
+        Q.SQLConnection := MainmFormLogin.conexao;
+        Q.SQL.Add('select conta_movimento.id from conta_movimento where conta_movimento.descricao = :dCX');
+        q.Params.ParamByName('dCX').AsString := (pCaixa);
+        Q.Open;
+        Result := Q.FieldByName('ID').AsInteger;
+       finally
+        FreeAndNil(Q);
+      end;
+     end;
+
+  end;
+  function TFrmLancamentos.RetornIDFunc(PidFunc: integer):integer;
+  var Q : TSQLQuery;
+
+ begin  //Retornar Id usuario
+  Q := TSQLQuery.Create(nil);
+    begin
+
+       try
+        Q.SQLConnection := MainmFormLogin.conexao;
+        Q.SQL.Add('select funcionario.id from funcionario where funcionario.conta_movimento = :pFunc');
+        q.Params.ParamByName('pFunc').AsInteger := (PidFunc);
+        Q.Open;
+        Result := Q.FieldByName('ID').AsInteger;
+       finally
+
+        FreeAndNil(Q);
+      end;
+     end;
+
+  end;
+
+
+ function TFrmLancamentos.SomarSaldoAnterior(pSaldo:integer):double;
+var     //passar id da conta como parametro
+ Q : TSqlQuery;
+ begin
+  try
+    Q := TSQLQuery.Create(nil);
+    Q.SQLConnection := MainmFormLogin.conexao;
+    Q.SQL.Add('select conta_movimento.saldo from conta_movimento where conta_movimento.id = :nSaldo');
+    Q.Params.ParamByName('nSaldo').AsInteger := (psaldo);
+    Q.Open;
+     Result := Q.FieldByName('SALDO').AsFloat;
+  finally
+     FreeAndNil(Q);
+  end;
+ end;
+
+procedure TFrmLancamentos.UnimFormCreate(Sender: TObject);
+begin
+  QueryCaixaMov.SQLConnection := MainmFormLogin.conexao;
+  QueryFunc.SQLConnection := MainmFormLogin.conexao;
+  QueryConfig.SQLConnection := MainmFormLogin.conexao;
+  SQLQuery1.SQLConnection := MainmFormLogin.conexao;
+end;
+
+procedure TFrmLancamentos.UnimFormShow(Sender: TObject);
+begin
+  SQLQuery1.Active := true;
+  SQLQuery1.DisableControls;
+  SQLQuery1.First;
+  while not SQLQuery1.Eof do
+  begin
+    UnimSelect1.Items.Add(SQLQuery1.FieldByName('DESCRICAO').AsString);
+    UnimSelect2.Items.Add(SQLQuery1.FieldByName('DESCRICAO').AsString);
+    SQLQuery1.Next;
+  end;
+   SQLQuery1.First;
+   SQLQuery1.EnableControls;
+   BtnSalvarTransf.Enabled := false;
+end;
+
+function TFrmLancamentos.RetornIdPlano;
+var
+ Q : TSqlQuery;
+ begin
+  try
+    Q := TSQLQuery.Create(nil);
+    Q.SQLConnection := MainmFormLogin.conexao;
+    Q.SQL.Add('select config_global.idplanotransferencia from config_global');
+    Q.Open;
+    Result := Q.FieldByName('IDPLANOTRANSFERENCIA').AsInteger;
+  finally
+     FreeAndNil(Q);
+  end;
+ end;
+
+
+ function TFrmLancamentos.RetornIdSubplano;
+var
+ Q : TSqlQuery;
+ begin
+  try
+    Q := TSQLQuery.Create(nil);
+    Q.SQLConnection := MainmFormLogin.conexao;
+    Q.SQL.Add('select config_global.idsubplanotransferencia from config_global');
+    Q.Open;
+    Result := Q.FieldByName('IDSUBPLANOTRANSFERENCIA').AsInteger;
+  finally
+     FreeAndNil(Q);
+  end;
+ end;
+
+ function TFrmLancamentos.DescSubPlano(Psubplano: Integer): string;
+ var
+ Q : TSqlQuery;
+ begin
+  try
+    Q := TSQLQuery.Create(nil);
+    Q.SQLConnection := MainmFormLogin.conexao;
+    Q.SQL.Add('select subplano.descricao from subplano where subplano.id = :pdesc');
+    Q.Params.ParamByName('pdesc').AsInteger := (Psubplano);
+    Q.Open;
+    Result := Q.FieldByName('DESCRICAO').AsString;
+  finally
+     FreeAndNil(Q);
+  end;
+ end;
+
+ function TFrmLancamentos.debitarsaldo;
+var   saldoP, saldototal: double;
+
+  begin
+    saldop := ValorInf;
+    saldototal :=(ValorAnt1 - saldoP);
+    result := saldototal;
+  end;
+
+function TFrmLancamentos.somarsaldo;
+var   saldoP, saldototal: double;
+
+  begin
+    saldop := ValorInf;
+    saldototal :=(ValorAnt2 + saldoP);
+    result := saldototal;
+  end;
+
+procedure TFrmLancamentos.AtivaDataSet ;
+begin
+  ClientDataSet1.Active := true;
+  DataSetCaixaMov.Active := true;
+  ClientDatasetFunc.Active := true;
+  DataSetConfig.Active := true;
+end;
+
+procedure TFrmLancamentos.DesativaDataSet;
+begin
+  ClientDataSet1.close;
+  DataSetCaixaMov.close;
+  ClientDatasetFunc.close;
+  DataSetConfig.close;
+end;
+
+
+procedure TFrmLancamentos.AtualizaSaldo(xSaldo: double; PidConta: integer);
+var Q: TSQLQUERY;
+begin
+ try
+    Q := SQLQuery1;
+    Q.Close;
+    Q.SQL.Clear;
+    Q.SQL.Add('update conta_movimento set conta_movimento.saldo = :pSaldoT where conta_movimento.id = :nIdConta');
+    Q.Params.ParamByName('pSaldoT').Asfloat := (xSaldo);
+    Q.Params.ParamByName('nIdConta').Asinteger := (pidConta);
+    Q.ExecSQL(false);
+
+  finally
+
+  end;
+end;
+
+end.

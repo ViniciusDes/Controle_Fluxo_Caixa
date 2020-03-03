@@ -1,0 +1,93 @@
+APP_FINANCEIRO.exe: 00001530: 08:41:46 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001530: 08:41:46 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001530: 08:41:46 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001530: 08:41:46 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00001530: 08:41:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001530: 08:41:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000E34: 08:42:51 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000E34: 08:42:51 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000E34: 08:42:51 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000E34: 08:42:51 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+APP_FINANCEIRO.exe: 00000E34: 08:42:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000E34: 08:42:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000016F8: 08:44:17 [192.168.25.97]:EConvertError : '22.02.2019' is not a valid date : Addr: $00426696
+APP_FINANCEIRO.exe: 00001464: 08:44:20 [192.168.25.97]:EConvertError : '22.02.2019' is not a valid date : Addr: $00426696
+APP_FINANCEIRO.exe: 00000BBC: 08:46:14 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000BBC: 08:46:14 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000BBC: 08:46:14 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000BBC: 08:46:14 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+APP_FINANCEIRO.exe: 00000BBC: 08:46:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000BBC: 08:46:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000BE4: 08:46:24 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 000015D4: 08:49:22 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000015D4: 08:49:22 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000015D4: 08:49:22 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000015D4: 08:49:22 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 000015D4: 08:49:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000015D4: 08:49:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000014DC: 08:49:40 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 000014A0: 08:50:10 [192.168.25.97]:EAccessViolation : Access violation at address 009647FC in module 'APP_FINANCEIRO.exe'. Read of address 00000000 : Addr: $009647FC
+APP_FINANCEIRO.exe: 00001644: 08:50:13 [192.168.25.97]:EAccessViolation : Access violation at address 009647FC in module 'APP_FINANCEIRO.exe'. Read of address 00000000 : Addr: $009647FC
+APP_FINANCEIRO.exe: 000011E8: 08:50:18 [192.168.25.97]:EAccessViolation : Access violation at address 009647FC in module 'APP_FINANCEIRO.exe'. Read of address 00000000 : Addr: $009647FC
+APP_FINANCEIRO.exe: 00001248: 08:50:20 [192.168.25.97]:EAccessViolation : Access violation at address 009647FC in module 'APP_FINANCEIRO.exe'. Read of address 00000000 : Addr: $009647FC
+APP_FINANCEIRO.exe: 00000360: 08:50:43 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000360: 08:50:43 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000360: 08:50:43 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000360: 08:50:43 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00000360: 08:50:43 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000360: 08:50:43 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000154C: 08:50:54 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 000011A0: 11:40:17 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000011A0: 11:40:17 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000011A0: 11:40:17 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000011A0: 11:40:17 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 000011A0: 11:40:17 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000011A0: 11:40:17 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000012A0: 11:44:16 [192.168.25.137]:EDatabaseError : ClientDataSet1: Dataset not in edit or insert mode : Addr: $006331E2
+APP_FINANCEIRO.exe: 00001704: 11:50:32 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001704: 11:50:32 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001704: 11:50:32 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001704: 11:50:32 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00001704: 11:50:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001704: 11:50:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000135C: 11:50:36 [192.168.25.137]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 00000DE8: 11:53:41 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000DE8: 11:53:41 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000DE8: 11:53:41 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000DE8: 11:53:41 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00000DE8: 11:53:41 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000DE8: 11:53:41 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001710: 11:53:47 [192.168.25.137]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 000004AC: 11:58:29 [192.168.25.137]:EDatabaseError : ClientDataSet1: Dataset not in edit or insert mode : Addr: $006331E2
+APP_FINANCEIRO.exe: 00000248: 12:13:27 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000248: 12:13:27 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000248: 12:13:27 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000248: 12:13:27 [TUniServerModule]:Global Cache Folder Erased. <19> Files deleted.
+APP_FINANCEIRO.exe: 00000248: 12:13:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000248: 12:13:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000111C: 12:13:42 [192.168.25.137]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 000003C4: 12:25:31 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000003C4: 12:25:31 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000003C4: 12:25:31 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000003C4: 12:25:31 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 000003C4: 12:25:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000003C4: 12:25:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000132C: 12:26:51 [192.168.25.137]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7
+APP_FINANCEIRO.exe: 00000E80: 12:26:52 [192.168.25.137]:EDatabaseError : Field 'IDFUNC' must have a value : Addr: $006331F7
+APP_FINANCEIRO.exe: 00001520: 12:26:53 [192.168.25.137]:EDatabaseError : Field 'IDFUNC' must have a value : Addr: $006331F7
+APP_FINANCEIRO.exe: 00000AF0: 12:27:11 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000AF0: 12:27:11 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000AF0: 12:27:11 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000AF0: 12:27:11 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00000AF0: 12:27:11 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000AF0: 12:27:11 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000354: 12:27:18 [192.168.25.137]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 00000AC8: 12:27:41 [192.168.25.137]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7
+APP_FINANCEIRO.exe: 000004A4: 13:00:02 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000004A4: 13:00:02 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000004A4: 13:00:02 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000004A4: 13:00:02 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 000004A4: 13:00:02 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000004A4: 13:00:02 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000F8C: 13:00:12 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 000009F0: 13:00:30 [192.168.25.97]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7

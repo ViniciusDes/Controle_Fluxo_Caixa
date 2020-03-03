@@ -1,0 +1,57 @@
+APP_FINANCEIRO.exe: 00000F0C: 15:38:11 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000F0C: 15:38:11 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000F0C: 15:38:11 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000F0C: 15:38:12 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000F0C: 15:38:12 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001310: 15:38:21 [HandleFileRequest[192.168.25.97]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00001228: 20:20:15 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001228: 20:20:15 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001228: 20:20:15 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001228: 20:20:15 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+APP_FINANCEIRO.exe: 00001228: 20:20:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001228: 20:20:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001098: 20:20:35 [HandleFileRequest[192.168.43.1]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00000F44: 20:26:32 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000F44: 20:26:32 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000F44: 20:26:32 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000F44: 20:26:32 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00000F44: 20:26:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000F44: 20:26:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000001C4: 20:26:36 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000DFC: 20:28:09 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000DFC: 20:28:09 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000DFC: 20:28:09 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000DFC: 20:28:09 [TUniServerModule]:Global Cache Folder Erased. <3> Files deleted.
+APP_FINANCEIRO.exe: 00000DFC: 20:28:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000DFC: 20:28:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001370: 20:30:36 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001370: 20:30:36 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001370: 20:30:36 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001370: 20:30:36 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+APP_FINANCEIRO.exe: 00001370: 20:30:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001370: 20:30:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000718: 20:30:41 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 000008E4: 20:30:42 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 000013F0: 20:30:49 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000C50: 20:31:33 [192.168.43.1]:EDatabaseError : DataSetCaixaMov: Dataset not in edit or insert mode : Addr: $00632E02
+APP_FINANCEIRO.exe: 00001148: 20:34:43 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001148: 20:34:43 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001148: 20:34:43 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001148: 20:34:43 [TUniServerModule]:Global Cache Folder Erased. <10> Files deleted.
+APP_FINANCEIRO.exe: 00001148: 20:34:43 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001148: 20:34:43 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000F4C: 20:35:58 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000F4C: 20:35:58 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000F4C: 20:35:58 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000F4C: 20:35:58 [TUniServerModule]:Global Cache Folder Erased. <5> Files deleted.
+APP_FINANCEIRO.exe: 00000F4C: 20:35:59 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000F4C: 20:35:59 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000AB0: 20:36:02 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 000005A0: 20:36:02 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001250: 20:47:22 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001250: 20:47:22 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001250: 20:47:22 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001250: 20:47:22 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+APP_FINANCEIRO.exe: 00001250: 20:47:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001250: 20:47:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000010B8: 20:47:32 [HandleFileRequest[192.168.43.1]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico

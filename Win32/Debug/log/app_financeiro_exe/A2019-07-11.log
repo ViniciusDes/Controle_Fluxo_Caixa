@@ -1,0 +1,7 @@
+APP_FINANCEIRO.exe: 00001830: 09:34:16 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001830: 09:34:16 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001830: 09:34:16 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001830: 09:34:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001830: 09:34:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001B04: 09:34:25 [HandleFileRequest[192.168.25.97]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00001084: 09:35:09 [192.168.25.97]:EOleException : SQLConnection property required for this operation : Addr: $00929A4A

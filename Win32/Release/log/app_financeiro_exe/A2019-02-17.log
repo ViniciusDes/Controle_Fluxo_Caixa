@@ -1,0 +1,19 @@
+APP_FINANCEIRO.exe: 00001088: 19:59:21 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001088: 19:59:21 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001088: 19:59:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001088: 19:59:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001720: 20:06:44 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079C23D
+APP_FINANCEIRO.exe: 00001720: 20:06:44 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079C23D
+APP_FINANCEIRO.exe: 00000CBC: 20:11:48 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079C23D
+APP_FINANCEIRO.exe: 00000CBC: 20:11:49 [192.168.43.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079C23D
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniServerModule]:Shutting Down Server.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniServerModule]:Stopping HTTP Server.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniServerModule]:HTTP Server Stopped.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniGUISessionManager]:Terminating Session manager.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniGUISessionManager]:Stopping Cache Eraser...
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniGUISessionManager]:Cache Eraser Stopped.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniGUISessionManager]:Destroying Worker Threads.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniGUISessionManager]:Session manager terminated.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [TUniServerModule]:Server Shutdown Completed.
+APP_FINANCEIRO.exe: 00001088: 20:18:50 []:<-------------------------------------------------------------->
+APP_FINANCEIRO.exe: 00001088: 20:18:50 [Terminated]:Exit Code: 0

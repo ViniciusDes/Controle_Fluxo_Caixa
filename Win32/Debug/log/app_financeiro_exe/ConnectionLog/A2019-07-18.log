@@ -1,0 +1,22 @@
+APP_FINANCEIRO.exe: 0000196C: 10:07:25 [127.0.0.1]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 0000196C: 10:07:35 [127.0.0.1]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 0000196C: 10:07:35 [127.0.0.1]:Processed: Id: 3, Evt: tap, [2cCNd1vDPm104429E90]
+APP_FINANCEIRO.exe: 00000CD0: 18:06:50 [127.0.0.1]:Failed Sequence Recovery: SeqId: 38, Event: tap
+APP_FINANCEIRO.exe: 00001264: 18:06:50 [127.0.0.1]:Failed Sequence Recovery: SeqId: 38, Event: tap
+APP_FINANCEIRO.exe: 00001410: 18:06:50 [127.0.0.1]:Failed Sequence Recovery: SeqId: 38, Event: tap
+APP_FINANCEIRO.exe: 00000CD0: 18:06:50 [127.0.0.1]:Processing: Id: 38, Evt: tap
+APP_FINANCEIRO.exe: 00000CD0: 18:06:52 [127.0.0.1]:Processed: Id: 38, Evt: tap, [f33hjLyw7H104432032]
+APP_FINANCEIRO.exe: 00001264: 18:06:57 [127.0.0.1]:Sequence sent from cache:  SeqId: 38
+APP_FINANCEIRO.exe: 00001264: 18:06:57 [127.0.0.1]:Processed: Id: 38, Evt: tap, [f33hjLyw7H104432032]
+APP_FINANCEIRO.exe: 00001410: 18:06:57 [127.0.0.1]:Sequence sent from cache:  SeqId: 38
+APP_FINANCEIRO.exe: 00001410: 18:06:58 [127.0.0.1]:Processed: Id: 38, Evt: tap, [f33hjLyw7H104432032]
+APP_FINANCEIRO.exe: 00001804: 18:06:58 [127.0.0.1]:Sequence sent from cache:  SeqId: 38
+APP_FINANCEIRO.exe: 00001344: 18:07:01 [127.0.0.1]:Failed Sequence Recovery: SeqId: 37, Event: tap
+APP_FINANCEIRO.exe: 00001344: 18:07:01 [127.0.0.1]:Sequence sent from cache:  SeqId: 37
+APP_FINANCEIRO.exe: 00001344: 18:07:01 [127.0.0.1]:Processed: Id: 37, Evt: tap, [f33hjLyw7H104432032]
+APP_FINANCEIRO.exe: 00001718: 18:07:01 [127.0.0.1]:Failed Sequence Recovery: SeqId: 37, Event: tap
+APP_FINANCEIRO.exe: 00001718: 18:07:01 [127.0.0.1]:Sequence sent from cache:  SeqId: 37
+APP_FINANCEIRO.exe: 00001718: 18:07:01 [127.0.0.1]:Processed: Id: 37, Evt: tap, [f33hjLyw7H104432032]
+APP_FINANCEIRO.exe: 00001EC0: 18:07:01 [127.0.0.1]:Failed Sequence Recovery: SeqId: 37, Event: tap
+APP_FINANCEIRO.exe: 00001EC0: 18:07:01 [127.0.0.1]:Sequence sent from cache:  SeqId: 37
+APP_FINANCEIRO.exe: 00001EC0: 18:07:01 [127.0.0.1]:Processed: Id: 37, Evt: tap, [f33hjLyw7H104432032]

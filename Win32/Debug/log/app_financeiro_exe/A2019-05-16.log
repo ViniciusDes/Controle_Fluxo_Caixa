@@ -1,0 +1,38 @@
+APP_FINANCEIRO.exe: 00000DCC: 08:52:36 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000DCC: 08:52:37 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001564: 08:52:38 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001564: 08:52:39 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001564: 08:52:39 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000858: 08:52:39 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001490: 09:09:11 [TUniServerModule]:Shutting Down Server.
+APP_FINANCEIRO.exe: 00001490: 09:09:11 [TUniServerModule]:Stopping HTTP Server.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniServerModule]:HTTP Server Stopped.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniGUISessionManager]:Terminating Session manager.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniGUISessionManager]:Stopping Cache Eraser...
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniGUISessionManager]:Cache Eraser Stopped.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniGUISessionManager]:Destroying Worker Threads.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniGUISessionManager]:Session manager terminated.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [TUniServerModule]:Server Shutdown Completed.
+APP_FINANCEIRO.exe: 00001490: 09:09:12 []:<-------------------------------------------------------------->
+APP_FINANCEIRO.exe: 00001490: 09:09:12 [Terminated]:Exit Code: 0
+APP_FINANCEIRO.exe: 000018FC: 10:35:38 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000018FC: 10:35:38 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000018FC: 10:35:38 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000018FC: 10:35:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000018FC: 10:35:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000162C: 10:35:41 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000BE8: 10:35:56 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001BB8: 10:40:20 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001BB8: 10:40:20 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001BB8: 10:40:20 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001BB8: 10:40:20 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001BB8: 10:40:20 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000006C0: 14:03:45 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001898: 14:03:45 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001B14: 14:03:47 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 000015D0: 14:03:47 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000AEC: 14:03:48 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 000015F8: 14:03:49 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000960: 14:03:50 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000D50: 14:03:50 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001730: 14:03:50 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE

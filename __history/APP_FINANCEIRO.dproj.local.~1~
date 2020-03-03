@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/01/30 08:35:48.000.347,=C:\SISTEMA ETICA\ServerModule.pas</Transaction>
+    <Transaction>2019/01/30 08:35:49.000.577,=C:\SISTEMA ETICA\MainModule.pas</Transaction>
+    <Transaction>2019/01/30 08:35:54.000.288,=C:\SISTEMA ETICA\Mainm.pas</Transaction>
+    <Transaction>2019/01/30 08:49:49.000.410,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/01/30 08:50:39.000.611,C:\SISTEMA ETICA\Unit1.pas=C:\SISTEMA ETICA\UntTelaPrincipal.pas</Transaction>
+    <Transaction>2019/01/30 08:50:39.000.611,C:\SISTEMA ETICA\Unit1.dfm=C:\SISTEMA ETICA\UntTelaPrincipal.dfm</Transaction>
+    <Transaction>2019/01/30 23:09:47.000.742,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/01/30 23:10:16.000.803,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/01/30 23:10:46.000.529,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/01/30 23:11:46.000.215,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/01/30 23:12:12.000.806,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/02/13 11:36:21.000.415,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/02/13 11:36:54.000.128,C:\SISTEMA ETICA\UntPrincipalEscolha.pas=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/02/13 11:36:54.000.128,C:\SISTEMA ETICA\UntPrincipalEscolha.dfm=C:\SISTEMA ETICA\Unit1.dfm</Transaction>
+    <Transaction>2019/02/13 12:07:26.000.587,=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/02/13 12:07:42.000.599,C:\SISTEMA ETICA\UntSangriaSuprimento.pas=C:\SISTEMA ETICA\Unit1.pas</Transaction>
+    <Transaction>2019/02/13 12:07:42.000.600,C:\SISTEMA ETICA\UntSangriaSuprimento.dfm=C:\SISTEMA ETICA\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

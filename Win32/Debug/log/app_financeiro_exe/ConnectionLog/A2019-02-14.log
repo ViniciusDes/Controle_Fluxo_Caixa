@@ -1,0 +1,10 @@
+APP_FINANCEIRO.exe: 00001450: 00:29:07 [192.168.43.1]:Failed Sequence Recovery: SeqId: 6, Event: blurchange
+APP_FINANCEIRO.exe: 00001450: 00:29:08 [192.168.43.1]:Processing: Id: 6, Evt: blurchange
+APP_FINANCEIRO.exe: 00001214: 00:29:08 [192.168.43.1]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 00001450: 00:29:08 [192.168.43.1]:Processed: Id: 6, Evt: blurchange, [NaIInWAstl103570537]
+APP_FINANCEIRO.exe: 00001214: 00:29:08 [192.168.43.1]:Sequence sent from cache:  SeqId: 5
+APP_FINANCEIRO.exe: 00001214: 00:29:08 [192.168.43.1]:Processed: Id: 5, Evt: tap, [NaIInWAstl103570537]
+APP_FINANCEIRO.exe: 00001648: 00:29:08 [192.168.43.1]:Sequence sent from cache:  SeqId: 6
+APP_FINANCEIRO.exe: 000016BC: 00:29:08 [192.168.43.1]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 000016BC: 00:29:08 [192.168.43.1]:Sequence sent from cache:  SeqId: 5
+APP_FINANCEIRO.exe: 000016BC: 00:29:08 [192.168.43.1]:Processed: Id: 5, Evt: tap, [NaIInWAstl103570537]

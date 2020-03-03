@@ -1,0 +1,24 @@
+APP_FINANCEIRO.exe: 00000DF8: 13:48:01 [192.168.25.89]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 0000109C: 13:48:02 [192.168.25.89]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 00001474: 13:48:02 [192.168.25.89]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 00001374: 13:48:02 [192.168.25.89]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 00000DF8: 13:48:08 [192.168.25.89]:Sequence sent from cache:  SeqId: 5
+APP_FINANCEIRO.exe: 00000DF8: 13:48:08 [192.168.25.89]:Processed: Id: 5, Evt: tap, [CCmOuavVbO1034EB557]
+APP_FINANCEIRO.exe: 00001474: 13:48:08 [192.168.25.89]:Sequence sent from cache:  SeqId: 5
+APP_FINANCEIRO.exe: 00001474: 13:48:08 [192.168.25.89]:Processed: Id: 5, Evt: tap, [CCmOuavVbO1034EB557]
+APP_FINANCEIRO.exe: 0000109C: 13:48:08 [192.168.25.89]:Sequence sent from cache:  SeqId: 5
+APP_FINANCEIRO.exe: 0000109C: 13:48:08 [192.168.25.89]:Processed: Id: 5, Evt: tap, [CCmOuavVbO1034EB557]
+APP_FINANCEIRO.exe: 00001374: 13:48:08 [192.168.25.89]:Sequence sent from cache:  SeqId: 5
+APP_FINANCEIRO.exe: 00001374: 13:48:08 [192.168.25.89]:Processed: Id: 5, Evt: tap, [CCmOuavVbO1034EB557]
+APP_FINANCEIRO.exe: 000010FC: 14:14:15 [192.168.25.89]:Failed Sequence Recovery: SeqId: 6, Event: tap
+APP_FINANCEIRO.exe: 000010FC: 14:14:15 [192.168.25.89]:Sequence sent from cache:  SeqId: 6
+APP_FINANCEIRO.exe: 000010FC: 14:14:15 [192.168.25.89]:Processed: Id: 6, Evt: tap, [jcynypr24L1034EBD6D]
+APP_FINANCEIRO.exe: 000002D8: 14:16:08 [192.168.25.89]:Sequence Error Timeout : TDiff:16864, Event: select, Expected: 6, Received: 8, [ZqUrTnuz6V1034EBE11]
+APP_FINANCEIRO.exe: 000002D8: 14:16:08 [192.168.25.89]:Failed Sequence Reset to: 6
+APP_FINANCEIRO.exe: 000011B4: 14:16:21 [192.168.25.89]:Failed Sequence Recovery: SeqId: 8, Event: select
+APP_FINANCEIRO.exe: 0000125C: 14:16:32 [192.168.25.89]:Failed Sequence Recovery: SeqId: 7, Event: tap
+APP_FINANCEIRO.exe: 000011B4: 14:16:32 [192.168.25.89]:Failed Sequence Recovery : TDiff:11170, Event: select, Expected: 7, Received: 8, [ZqUrTnuz6V1034EBE11]
+APP_FINANCEIRO.exe: 000011B4: 14:16:32 [192.168.25.89]:Failed Sequence Reset to: 7
+APP_FINANCEIRO.exe: 000011B4: 14:16:32 [192.168.25.89]:Processed: Id: 8, Evt: select, [ZqUrTnuz6V1034EBE11]
+APP_FINANCEIRO.exe: 00000508: 14:16:32 [192.168.25.89]:Sequence Error Timeout : TDiff:11186, Event: tap, Expected: 7, Received: 9, [ZqUrTnuz6V1034EBE11]
+APP_FINANCEIRO.exe: 000013F4: 14:16:32 [192.168.25.89]:Failed Sequence Recovery: SeqId: 8, Event: select

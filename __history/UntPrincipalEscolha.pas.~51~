@@ -1,0 +1,165 @@
+unit UntPrincipalEscolha;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniGUIBaseClasses, uniButton, unimButton, Vcl.Imaging.pngimage, uniImage,
+  unimImage, Vcl.ExtCtrls, uniBitBtn, uniSpeedButton, unimBitBtn, uniMultiItem,
+  unimSelect, uniLabel, unimLabel, IniFiles, Data.DB, Data.SqlExpr,
+  Data.DBXFirebird, uniEdit, unimEdit;
+
+type
+  TFrmPrincipalEscolha = class(TUnimForm)
+    UnimButton1: TUnimButton;
+    UnimButton4: TUnimButton;
+    UnimButton2: TUnimButton;
+    UnimBitBtn1: TUnimBitBtn;
+    UnimLabel1: TUnimLabel;
+    UnimSelect1: TUnimSelect;
+    procedure UnimButton1Click(Sender: TObject);
+    procedure UnimButton4Click(Sender: TObject);
+    procedure UnimButton3Click(Sender: TObject);
+    procedure AtivaDataSetTelaTransf;
+    procedure DesativaDataSetTelaTransf;
+    procedure UnimBitBtn1Click(Sender: TObject);
+    procedure LeIni;
+    procedure GravaIni(aTexto: string);
+    procedure UnimBitBtn2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+
+    { Public declarations }
+    var
+      ArquivoINI: tIniFile;
+      Mostraini : string;
+      ArqIni: TIniFile;
+  end;
+
+function FrmPrincipalEscolha: TFrmPrincipalEscolha;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, UntTelaPrincipal, UntSangriaSuprimento,
+  UntLancamentos, UnitLanc, UntLancPlanos, mainm;
+
+function FrmPrincipalEscolha: TFrmPrincipalEscolha;
+begin
+  Result := TFrmPrincipalEscolha(UniMainModule.GetFormInstance(TFrmPrincipalEscolha));
+end;
+
+procedure TFrmPrincipalEscolha.UnimBitBtn1Click(Sender: TObject);
+begin
+ FrmLancamentos.ShowModal;
+end;
+
+procedure TFrmPrincipalEscolha.UnimBitBtn2Click(Sender: TObject);
+begin
+  LeIni;
+
+
+end;
+
+procedure TFrmPrincipalEscolha.UnimButton1Click(Sender: TObject);
+begin
+
+  begin
+  ArquivoINI := TIniFile.Create('C:\SISTEMA ETICA\config.INI');
+  ArquivoINI.WriteString('path','USUARIO','SENHA');
+  ArquivoINI.Free;
+  end;
+   UnimFormPrincipal.ShowModal;
+end;
+
+procedure TFrmPrincipalEscolha.UnimButton3Click(Sender: TObject);
+begin
+   if UnimSelect1.Text = '' then
+   begin
+     ShowMessage('Selecione a conta a ser manipulada!');
+   end
+   else
+   begin
+    FrmLancPlanos.showmodal;
+    FrmLancPlanos.ativaDataSet;
+   end;
+end;
+
+procedure TFrmPrincipalEscolha.UnimButton4Click(Sender: TObject);
+begin
+    if UnimSelect1.Text = '' then
+   begin
+     ShowMessage('Selecione a conta a ser manipulada!');
+   end
+   else
+  FrmSangriaSuprimento.ShowModal;
+end;
+
+procedure TFrmPrincipalEscolha.AtivaDataSetTelaTransf;
+begin
+  FrmLancamentos.ClientDataSet1.Active := true;
+  FrmLancamentos.DataSetCaixaMov.Active := true;
+  FrmLancamentos.ClientDatasetFunc.Active := true;
+  FrmLancamentos.DataSetConfig.Active := true;
+end;
+
+procedure TFrmPrincipalEscolha.DesativaDataSetTelaTransf;
+begin
+  FrmLancamentos.ClientDataSet1.Active := false;
+  FrmLancamentos.DataSetCaixaMov.Active := false;
+  FrmLancamentos.ClientDatasetFunc.Active := false;
+  FrmLancamentos.DataSetConfig.Active := false;
+end;
+
+procedure TFrmPrincipalEscolha.LeIni;
+var
+  caminho : string;
+  ArqIni: TIniFile;
+
+begin
+
+  ArqIni := TIniFile.Create('C:\Ettica\EXEC\config.ini');
+
+  try
+
+    caminho := ArqIni.ReadString('DADOS', 'PATH', caminho);
+  // UnimEdit1.Text := caminho;
+   MainmFormLogin.conexao.Params.Values['DataBase'] := caminho;
+   MainmFormLogin.conexao.Connected := true;
+
+  finally
+
+    ArqIni.Free;
+
+  end;
+
+end;
+
+procedure TFrmPrincipalEscolha.GravaIni(aTexto: string);
+
+var
+
+  ArqIni: TIniFile;
+
+begin
+
+  ArqIni := TIniFile.Create('C:\Ettica\EXEC\config.ini');
+
+  try
+
+    ArqIni.WriteString('Dados', 'PATH', aTexto);
+
+  finally
+
+    ArqIni.Free;
+
+  end;
+
+end;
+end.
+

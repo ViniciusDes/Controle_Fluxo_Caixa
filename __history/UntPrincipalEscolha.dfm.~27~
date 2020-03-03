@@ -1,0 +1,76 @@
+object FrmPrincipalEscolha: TFrmPrincipalEscolha
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 320
+  Caption = 'ETICA TECNLOGIA'
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object UnimLabel1: TUnimLabel
+    Left = 48
+    Top = 16
+    Width = 241
+    Height = 23
+    Hint = ''
+    AutoSize = False
+    Caption = 'Conta a ser man'#237'pulada:'
+    ParentFont = False
+    Font.Color = clBlue
+    Font.Style = [fsUnderline]
+  end
+  object UnimSelect1: TUnimSelect
+    Left = 48
+    Top = 45
+    Width = 225
+    Height = 47
+    Hint = ''
+    TabOrder = 4
+  end
+  object UnimButton1: TUnimButton
+    Left = 8
+    Top = 125
+    Width = 304
+    Height = 47
+    Hint = ''
+    Align = alCustom
+    Caption = 'Consulta Caixa di'#225'rio'
+    Font.Color = clBlue
+    OnClick = UnimButton1Click
+  end
+  object UnimButton4: TUnimButton
+    Left = 8
+    Top = 186
+    Width = 304
+    Height = 47
+    Hint = ''
+    Align = alCustom
+    Caption = 'Suprimentos/Sangria'
+    Font.Color = clBlue
+    OnClick = UnimButton4Click
+  end
+  object UnimBitBtn1: TUnimBitBtn
+    Left = 8
+    Top = 248
+    Width = 304
+    Height = 47
+    Hint = ''
+    Caption = 'Transf. entre Contas'
+    Font.Color = clBlue
+    OnClick = UnimBitBtn1Click
+  end
+  object UnimButton2: TUnimButton
+    Left = 8
+    Top = 317
+    Width = 304
+    Height = 47
+    Hint = ''
+    Align = alCustom
+    Caption = 'Lan'#231'amentos '
+    Font.Color = clBlue
+    OnClick = UnimButton3Click
+  end
+end

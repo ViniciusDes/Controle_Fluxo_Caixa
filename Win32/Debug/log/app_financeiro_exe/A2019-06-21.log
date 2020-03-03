@@ -1,0 +1,11 @@
+APP_FINANCEIRO.exe: 000010DC: 09:55:47 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000010DC: 09:55:47 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000010DC: 09:55:47 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000010DC: 09:55:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000010DC: 09:55:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001100: 10:52:31 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001100: 10:52:31 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001100: 10:52:31 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001100: 10:52:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001100: 10:52:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001368: 10:53:12 [192.168.25.97]:EDatabaseError : ClientDataSet1: Dataset not in edit or insert mode : Addr: $00677986

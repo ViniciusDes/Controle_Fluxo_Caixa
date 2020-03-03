@@ -1,0 +1,40 @@
+program APP_FINANCEIRO;
+
+uses
+  Forms,
+  mainm in 'mainm.pas' {UniMainm: TUniGUIServerModule},
+  ServerModule in 'ServerModule.pas' {UniServerModule: TUniGUIServerModule},
+  MainModule in 'MainModule.pas' {UniMainModule: TUniGUIMainModule},
+  UntTelaPrincipal in 'UntTelaPrincipal.pas' {UnimFormPrincipal: TUnimForm},
+  UntPrincipalEscolha in 'UntPrincipalEscolha.pas' {FrmPrincipalEscolha: TUnimForm},
+  UntSangriaSuprimento in 'UntSangriaSuprimento.pas' {FrmSangriaSuprimento: TUnimForm},
+  UnitLanc in 'UnitLanc.pas' {FrmLancamentos: TUnimForm},
+  Unit1 in 'Unit1.pas' {UniMainModule1: TUniGUIMainModule},
+  UntLancPlanos in 'UntLancPlanos.pas' {FrmLancPlanos: TUnimForm},
+  UntGridPlanos in 'UntGridPlanos.pas' {FrmGridPlanos: TUnimForm},
+  UntRelatorio in 'UntRelatorio.pas' {UnimForm2: TUnimForm};
+
+begin
+  ReportMemoryLeaksOnShutdown := false;
+  Application.Initialize;
+  TUniServerModule.Create(Application);
+  Application.Title := 'CAIXA MOBILE';
+//  Application.HelpFile := 'C:\Ettica\EXEC\IMAGENS\FundoCupom.exe';
+  Application.CreateForm(TUniMainModule1, UniMainModule1);
+  //Application.CreateForm(TUniMainm, UniMainm);
+  //Application.CreateForm(TUniServerModule, UniServerModule);
+  //Application.CreateForm(TUniMainModule, UniMainModule);
+  //Application.CreateForm(TUnimFormPrincipal, UnimFormPrincipal);
+  //Application.CreateForm(TFrmPrincipalEscolha, FrmPrincipalEscolha);
+  //Application.CreateForm(TFrmSangriaSuprimento, FrmSangriaSuprimento);
+  //Application.CreateForm(TFrmLancamentos, FrmLancamentos);
+  //Application.CreateForm(TFrmLancPlanos, FrmLancPlanos);
+  //Application.CreateForm(TFrmGridPlanos, FrmGridPlanos);
+  // Application.CreateForm(TUniServerModule, UniServerModule);
+  ///Application.CreateForm(TUniMainModule, UniMainModule);
+ // Application.CreateForm(TUnimFormPrincipal, UnimFormPrincipal);
+ // Application.CreateForm(TFrmPrincipalEscolha, FrmPrincipalEscolha);
+ // Application.CreateForm(TFrmSangriaSuprimento, FrmSangriaSuprimento);
+ // Application.CreateForm(TFrmLancamentos, FrmLancamentos);
+  Application.Run;
+end.

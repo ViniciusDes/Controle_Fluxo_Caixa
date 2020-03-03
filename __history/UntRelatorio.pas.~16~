@@ -1,0 +1,109 @@
+unit UntRelatorio;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniButton, uniBitBtn, unimBitBtn, Data.DB, Datasnap.DBClient,
+  uniGUIBaseClasses, uniBasicGrid, uniDBGrid, unimDBListGrid, unimDBGrid, Data.SqlExpr,
+  Data.FMTBcd, Datasnap.Provider, uniLabel, unimLabel;
+
+type
+  TFrmRelatorio = class(TUnimForm)
+    Dbgrid1: TUnimDBGrid;
+    SQLQuery1: TSQLQuery;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DataSource1: TDataSource;
+    UnimLabel1: TUnimLabel;
+    UnimLabel3: TUnimLabel;
+    UnimLabel4: TUnimLabel;
+    LbData1: TUnimLabel;
+    LbData2: TUnimLabel;
+    UnimLabel7: TUnimLabel;
+    LbConta: TUnimLabel;
+  //  PROCEDURE FORMATAR;
+    function CalculaContA: double;
+    procedure Dbgrid1DrawColumnCell(Sender: TObject; ACol, ARow: Integer;
+      Column: TunimDBGridColumn; Attribs: TUniCellAttribs);
+    procedure UnimFormCreate(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function FrmRelatorio: TFrmRelatorio;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, mainm, UntTelaPrincipal;
+
+function FrmRelatorio: TFrmRelatorio;
+begin
+  Result := TFrmRelatorio(UniMainModule.GetFormInstance(TFrmRelatorio));
+end;
+
+function TFrmRelatorio.CalculaContA: double;
+  var Q : TSQLQuery;
+
+
+ begin  //FUNÇÃO CALCULAR CONTA
+  Q := TSQLQuery.Create(nil);
+    begin
+
+       try
+        Q.SQLConnection := MainmFormLogin.conexao;
+        Q.SQL.Add('SELECT caixa_mov.desc_subplano as origem, SUM(valor) as valor from caixa_mov group by caixa_mov.desc_subplano');
+        //q.Params.ParamByName('nIdCaixa').AsString := inttostr(nidconta);
+        //q.Params.ParamByName('pData').AsString := (FormatDateTime('dd.mm.yyyy',(dData)));
+        //q.Params.ParamByName('pData2').AsString := (FormatDateTime('dd.mm.yyyy',(dData2)));
+        Q.Open;
+        Result := Q.FieldByName('desc_subplano, SUM').AsFLoat;
+       finally
+        FreeAndNil(Q);
+      end;
+     end;
+
+  end;
+
+
+procedure TFrmRelatorio.Dbgrid1DrawColumnCell(Sender: TObject; ACol,
+  ARow: Integer; Column: TunimDBGridColumn; Attribs: TUniCellAttribs);
+begin
+ {SQLQuery1.Close;
+  SQLQuery1.Open;
+   if SQLQuery1.FieldByName('DC').AsString = 'D' then
+   begin
+         //DBGrid1.Font.Style := DBGrid1.Font.Style;
+         DBGrid1.Font.Color := clBlue;
+        // DBGrid1.DefaultDrawDataCell(RECT,Column.Field,State);
+   end;  }
+
+end;
+
+procedure TFrmRelatorio.UnimFormCreate(Sender: TObject);
+begin
+   LbData1.Caption := (DateToStr(UnimFormPrincipal.UnimDatePicker1.Date));
+   LbData2.Caption := (DateToStr(UnimFormPrincipal.UnimDatePicker2.Date));
+   LbConta.Caption := UnimFormPrincipal.UnimSelect1.Text;
+   if UnimFormPrincipal.UnimSelect1.Text = '' then
+    begin
+       LbConta.Text := 'Todas'
+    end;
+
+ end;
+
+procedure fORMATAR;
+ begin
+   //SQLQuery1.Close;
+   //TNumericField(SQLQuery1.FieldByName('VALOR')).DisplayFormat := ',0.00;-,0.00';
+   //SQLQuery1.Open;
+ end;
+end.

@@ -1,0 +1,144 @@
+APP_FINANCEIRO.exe: 000016E8: 14:36:13 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000016E8: 14:36:14 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000016E8: 14:36:14 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000016E8: 14:36:14 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 000016E8: 14:36:14 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000016E8: 14:36:14 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 000027E8: 14:36:19 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 000022A0: 14:36:21 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 00000FA4: 14:36:23 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 000021D8: 14:38:26 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000021D8: 14:38:26 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000021D8: 14:38:26 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000021D8: 14:38:26 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000021D8: 14:38:26 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 000013D4: 14:38:56 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000013D4: 14:38:56 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000013D4: 14:38:56 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000013D4: 14:38:56 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000013D4: 14:38:56 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 000017FC: 14:39:00 [Access violation at address 009BB457 in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB457 in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB457
+APP_FINANCEIRO.exe: 00001E38: 14:39:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 00001538: 14:41:01 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001538: 14:41:01 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001538: 14:41:01 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001538: 14:41:01 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001538: 14:41:01 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000154C: 14:41:16 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 00000470: 14:48:36 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000470: 14:48:37 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000470: 14:48:37 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000470: 14:48:37 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00000470: 14:48:37 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000117C: 14:48:38 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 00002124: 14:49:44 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00002124: 14:49:44 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00002124: 14:49:44 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00002124: 14:49:44 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+APP_FINANCEIRO.exe: 00002124: 14:49:44 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00002124: 14:49:44 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000994: 14:49:46 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 00001304: 14:50:29 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001304: 14:50:29 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001304: 14:50:29 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001304: 14:50:29 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001304: 14:50:30 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000202C: 14:50:34 [Access violation at address 009BB363 in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB363 in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB363
+APP_FINANCEIRO.exe: 000027D0: 14:56:07 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000027D0: 14:56:07 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000027D0: 14:56:07 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000027D0: 14:56:07 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000027D0: 14:56:07 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00001F18: 14:56:36 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001F18: 14:56:36 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001F18: 14:56:36 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001F18: 14:56:36 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001F18: 14:56:36 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00001610: 14:56:40 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 000009CC: 14:56:41 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 000012B0: 14:57:43 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000012B0: 14:57:43 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000012B0: 14:57:43 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000012B0: 14:57:43 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000012B0: 14:57:43 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00001960: 14:57:47 [Access violation at address 009BB353 in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB353 in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB353
+APP_FINANCEIRO.exe: 00001EB4: 14:57:48 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0077208F
+APP_FINANCEIRO.exe: 000023D4: 15:03:46 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000023D4: 15:03:46 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000023D4: 15:03:46 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000023D4: 15:03:46 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000023D4: 15:03:46 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00001F10: 15:03:47 [Access violation at address 009BB353 in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB353 in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB353
+APP_FINANCEIRO.exe: 00001E30: 15:03:48 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00000FBC: 15:05:24 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000FBC: 15:05:24 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000FBC: 15:05:24 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000FBC: 15:05:24 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00000FBC: 15:05:24 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000468: 15:05:26 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00001DDC: 15:05:51 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001DDC: 15:05:51 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001DDC: 15:05:51 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001DDC: 15:05:51 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001DDC: 15:05:51 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00002744: 15:06:12 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00001DA0: 15:06:55 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001DA0: 15:06:55 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001DA0: 15:06:55 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001DA0: 15:06:56 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001DA0: 15:06:56 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000580: 15:06:57 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 00001D10: 15:19:14 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001D10: 15:19:14 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001D10: 15:19:14 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001D10: 15:19:14 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001D10: 15:19:14 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00001CD0: 15:19:20 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 00001C18: 15:19:21 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 000008F0: 15:19:43 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000008F0: 15:19:43 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000008F0: 15:19:43 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000008F0: 15:19:43 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000008F0: 15:19:43 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000680: 15:19:44 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 000000F0: 15:19:46 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00000D7C: 15:20:07 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000D7C: 15:20:07 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000D7C: 15:20:07 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000D7C: 15:20:08 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00000D7C: 15:20:08 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000E18: 15:20:08 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 000023BC: 15:20:09 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00000F6C: 15:29:20 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000F6C: 15:29:21 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000F6C: 15:29:21 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000F6C: 15:29:21 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00000F6C: 15:29:21 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000023C: 15:29:25 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00001A98: 15:33:41 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001A98: 15:33:41 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001A98: 15:33:41 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001A98: 15:33:41 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001A98: 15:33:41 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00002594: 15:33:48 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 000015A0: 15:33:49 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 000022A0: 15:34:50 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000022A0: 15:34:50 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000022A0: 15:34:50 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000022A0: 15:34:50 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 000022A0: 15:34:50 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000408: 15:34:51 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 00000620: 15:34:54 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 00001718: 15:39:40 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001718: 15:39:40 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001718: 15:39:40 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001718: 15:39:40 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001718: 15:39:40 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00000FA4: 15:39:44 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F
+APP_FINANCEIRO.exe: 000005F4: 15:39:45 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB
+APP_FINANCEIRO.exe: 0000148C: 16:24:18 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 0000148C: 16:24:18 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 0000148C: 16:24:18 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 0000148C: 16:24:18 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 0000148C: 16:24:18 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000113C: 16:24:22 [Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074-127.0.0.1]:EAccessViolation : Access violation at address 009BB35F in module 'APP_FINANCEIRO.exe'. Read of address 00000074 : Addr: $009BB35F

@@ -1,0 +1,21 @@
+APP_FINANCEIRO.exe: 00001AAC: 14:37:22 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001AAC: 14:37:45 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 00001AAC: 14:37:45 [192.168.25.97]:Processed: Id: 3, Evt: tap, [wfVkPNlQF21043E53EF]
+APP_FINANCEIRO.exe: 00001AAC: 14:37:45 [192.168.25.97]:Failed Sequence Recovery: SeqId: 4, Event: vpsize
+APP_FINANCEIRO.exe: 00001AAC: 14:37:45 [192.168.25.97]:Sequence sent from cache:  SeqId: 4
+APP_FINANCEIRO.exe: 00001AAC: 14:37:45 [192.168.25.97]:Processed: Id: 4, Evt: vpsize, [wfVkPNlQF21043E53EF]
+APP_FINANCEIRO.exe: 00000AFC: 14:42:34 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001790: 14:43:09 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001790: 14:43:11 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 00001790: 14:43:11 [192.168.25.97]:Processed: Id: 3, Evt: tap, [veKtu2cbM31043E5557]
+APP_FINANCEIRO.exe: 00000AFC: 14:43:11 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 00000AFC: 14:43:11 [192.168.25.97]:Processed: Id: 3, Evt: tap, [veKtu2cbM31043E5557]
+APP_FINANCEIRO.exe: 00001608: 15:11:24 [192.168.25.108]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001B54: 15:21:40 [192.168.25.108]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 0000132C: 15:23:08 [192.168.25.108]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00000984: 17:34:44 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00000D44: 17:35:19 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001A68: 17:40:31 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001A68: 17:40:57 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 00001A68: 17:40:57 [192.168.25.97]:Processed: Id: 3, Evt: tap, [77JvtFtwT41043E8590]
+APP_FINANCEIRO.exe: 00001B98: 17:50:56 [192.168.25.97]:Failed Sequence Recovery: SeqId: 16, Event: tap

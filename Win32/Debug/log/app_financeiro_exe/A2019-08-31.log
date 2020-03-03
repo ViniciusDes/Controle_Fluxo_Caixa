@@ -1,0 +1,23 @@
+APP_FINANCEIRO.exe: 00000280: 00:31:43 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000280: 00:31:43 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000280: 00:31:43 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+APP_FINANCEIRO.exe: 00000280: 00:31:43 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000280: 00:31:43 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00002528: 00:32:37 [HandleFileRequest[192.168.100.12]]:File not found: D:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00000280: 00:35:41 [TUniServerModule]:Shutting Down Server.
+APP_FINANCEIRO.exe: 00000280: 00:35:41 [TUniServerModule]:Stopping HTTP Server.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniServerModule]:HTTP Server Stopped.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniGUISessionManager]:Terminating Session manager.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniGUISessionManager]:Stopping Cache Eraser...
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniGUISessionManager]:Cache Eraser Stopped.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniGUISessionManager]:Destroying Worker Threads.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniGUISessionManager]:Session manager terminated.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [TUniServerModule]:Server Shutdown Completed.
+APP_FINANCEIRO.exe: 00000280: 00:35:42 []:<-------------------------------------------------------------->
+APP_FINANCEIRO.exe: 00000280: 00:35:42 [Terminated]:Exit Code: 0
+APP_FINANCEIRO.exe: 00000624: 00:35:53 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000624: 00:35:53 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000624: 00:35:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000624: 00:35:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000011C8: 00:36:07 [192.168.100.12]:EUniSessionException : Invalid session or session Timeout. : Addr: $00774522
+APP_FINANCEIRO.exe: 00002BCC: 00:37:53 [192.168.100.12]:EDatabaseError : SQLQuery1: Cannot perform this operation on a closed dataset : Addr: $00634B12

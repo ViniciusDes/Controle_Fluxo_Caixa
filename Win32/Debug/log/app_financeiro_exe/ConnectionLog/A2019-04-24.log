@@ -1,0 +1,5 @@
+APP_FINANCEIRO.exe: 000011B4: 12:28:04 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 0000077C: 12:34:01 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 0000167C: 12:34:01 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00000C5C: 13:19:59 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00000ABC: 13:27:05 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap

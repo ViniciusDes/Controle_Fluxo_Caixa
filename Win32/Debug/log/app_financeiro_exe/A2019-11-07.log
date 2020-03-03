@@ -1,0 +1,19 @@
+APP_FINANCEIRO.exe: 00002228: 13:22:39 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00002228: 13:22:39 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00002228: 13:22:39 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00002228: 13:22:39 [TUniServerModule]:Global Cache Folder Erased. <10> Files deleted.
+APP_FINANCEIRO.exe: 00002228: 13:22:39 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00002228: 13:22:39 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000071C: 13:40:42 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 0000071C: 13:40:42 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 0000071C: 13:40:42 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 0000071C: 13:40:42 [TUniServerModule]:Global Cache Folder Erased. <8> Files deleted.
+APP_FINANCEIRO.exe: 0000071C: 13:40:42 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 0000071C: 13:40:42 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00001C1C: 13:45:27 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001C1C: 13:45:27 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001C1C: 13:45:27 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001C1C: 13:45:27 [TUniServerModule]:Global Cache Folder Erased. <13> Files deleted.
+APP_FINANCEIRO.exe: 00001C1C: 13:45:27 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001C1C: 13:45:27 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 0000334C: 13:45:31 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079FEAB

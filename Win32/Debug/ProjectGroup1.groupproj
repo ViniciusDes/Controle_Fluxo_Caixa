@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5AB3456E-0423-42E6-AFA1-26DAF047DAD3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="C:\EticaBarcodeMobile\EticaMobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\APP_FINANCEIRO.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="EticaMobile">
+        <MSBuild Projects="C:\EticaBarcodeMobile\EticaMobile.dproj"/>
+    </Target>
+    <Target Name="EticaMobile:Clean">
+        <MSBuild Projects="C:\EticaBarcodeMobile\EticaMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EticaMobile:Make">
+        <MSBuild Projects="C:\EticaBarcodeMobile\EticaMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="APP_FINANCEIRO">
+        <MSBuild Projects="..\..\APP_FINANCEIRO.dproj"/>
+    </Target>
+    <Target Name="APP_FINANCEIRO:Clean">
+        <MSBuild Projects="..\..\APP_FINANCEIRO.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="APP_FINANCEIRO:Make">
+        <MSBuild Projects="..\..\APP_FINANCEIRO.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="EticaMobile;APP_FINANCEIRO"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="EticaMobile:Clean;APP_FINANCEIRO:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="EticaMobile:Make;APP_FINANCEIRO:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

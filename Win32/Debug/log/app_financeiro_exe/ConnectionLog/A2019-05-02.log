@@ -1,0 +1,12 @@
+APP_FINANCEIRO.exe: 000007BC: 14:02:26 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 000010FC: 14:03:26 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 0000108C: 14:03:37 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001344: 14:04:11 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001344: 14:04:16 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 00001344: 14:04:16 [192.168.25.97]:Processed: Id: 3, Evt: tap, [6sFPX1Ue7L103CD603B]
+APP_FINANCEIRO.exe: 000010FC: 14:04:16 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 000010FC: 14:04:16 [192.168.25.97]:Processed: Id: 3, Evt: tap, [6sFPX1Ue7L103CD603B]
+APP_FINANCEIRO.exe: 0000108C: 14:04:16 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 0000108C: 14:04:16 [192.168.25.97]:Processed: Id: 3, Evt: tap, [6sFPX1Ue7L103CD603B]
+APP_FINANCEIRO.exe: 000007BC: 14:04:16 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 000007BC: 14:04:16 [192.168.25.97]:Processed: Id: 3, Evt: tap, [6sFPX1Ue7L103CD603B]

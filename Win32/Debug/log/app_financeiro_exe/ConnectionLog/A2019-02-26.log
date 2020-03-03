@@ -1,0 +1,66 @@
+APP_FINANCEIRO.exe: 000009C8: 14:18:06 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 000009C8: 14:18:06 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 000009C8: 14:18:06 [192.168.25.97]:Processed: Id: 3, Evt: tap, [tuQAEVqYwN1036A35D9]
+APP_FINANCEIRO.exe: 00000BC8: 14:37:53 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00000BC8: 14:37:59 [192.168.25.97]:Sequence sent from cache:  SeqId: 3
+APP_FINANCEIRO.exe: 00000BC8: 14:37:59 [192.168.25.97]:Processed: Id: 3, Evt: tap, [pe995msdKt1036A3B25]
+APP_FINANCEIRO.exe: 0000162C: 14:38:02 [192.168.25.97]:Failed Sequence Recovery: SeqId: 4, Event: tap
+APP_FINANCEIRO.exe: 0000162C: 14:38:02 [192.168.25.97]:Sequence sent from cache:  SeqId: 4
+APP_FINANCEIRO.exe: 0000162C: 14:38:02 [192.168.25.97]:Processed: Id: 4, Evt: tap, [pe995msdKt1036A3B25]
+APP_FINANCEIRO.exe: 000010A0: 15:14:53 [192.168.25.77]:Sequence Error Timeout : TDiff:10015, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000010A0: 15:14:53 [192.168.25.77]:Failed Sequence Reset to: 124
+APP_FINANCEIRO.exe: 000012AC: 15:14:53 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 00001248: 15:14:54 [192.168.25.77]:Sequence Error Timeout : TDiff:10015, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000012AC: 15:14:55 [192.168.25.77]:Failed Sequence Recovery : TDiff:2013, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000012AC: 15:14:55 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001678: 15:14:55 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 00001340: 15:14:55 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 00001678: 15:14:57 [192.168.25.77]:Failed Sequence Recovery : TDiff:2013, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001678: 15:14:57 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001340: 15:14:57 [192.168.25.77]:Failed Sequence Recovery : TDiff:2013, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001340: 15:14:57 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00000808: 15:14:57 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 000010A4: 15:14:57 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 00000808: 15:14:59 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00000808: 15:14:59 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000010A4: 15:14:59 [192.168.25.77]:Failed Sequence Recovery : TDiff:2013, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000010A4: 15:14:59 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001600: 15:14:59 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 000009B4: 15:15:00 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 00001600: 15:15:01 [192.168.25.77]:Failed Sequence Recovery : TDiff:2013, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001600: 15:15:01 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000009B4: 15:15:02 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000009B4: 15:15:02 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001358: 15:15:02 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 0000096C: 15:15:02 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 00001358: 15:15:04 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001358: 15:15:04 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 0000096C: 15:15:04 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 0000096C: 15:15:04 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000011F4: 15:15:04 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 000009B8: 15:15:04 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 000011F4: 15:15:06 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000011F4: 15:15:06 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000009B8: 15:15:06 [192.168.25.77]:Failed Sequence Recovery : TDiff:2028, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000009B8: 15:15:06 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 0000123C: 15:15:06 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 00001344: 15:15:06 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 0000123C: 15:15:08 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 0000123C: 15:15:08 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001344: 15:15:08 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001344: 15:15:08 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001528: 15:15:09 [192.168.25.77]:Failed Sequence Recovery: SeqId: 127, Event: keyup
+APP_FINANCEIRO.exe: 000004B0: 15:15:09 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 000004B0: 15:15:11 [192.168.25.77]:Failed Sequence Recovery : TDiff:2012, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000004B0: 15:15:11 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001528: 15:15:11 [192.168.25.77]:Failed Sequence Recovery : TDiff:2028, Event: keyup, Expected: 124, Received: 127, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00001528: 15:15:11 [192.168.25.77]:Processed: Id: 127, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00000B88: 15:15:14 [192.168.25.77]:Failed Sequence Recovery: SeqId: 125, Event: keyup
+APP_FINANCEIRO.exe: 00000B88: 15:15:16 [192.168.25.77]:Failed Sequence Recovery : TDiff:2028, Event: keyup, Expected: 124, Received: 125, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 00000B88: 15:15:16 [192.168.25.77]:Missing Sequence: Exp:124, TDiff:22527/22500, FCnt:17
+APP_FINANCEIRO.exe: 00000B88: 15:15:16 [192.168.25.77]:Processed: Id: 125, Evt: keyup, [j19UcRqwXI1036A4461]
+APP_FINANCEIRO.exe: 000004E4: 15:44:27 [192.168.25.77]:Sequence Error Timeout : TDiff:10015, Event: tap, Expected: 9, Received: 10, [9GXAyQllyT1036A4CDE]
+APP_FINANCEIRO.exe: 000004E4: 15:44:27 [192.168.25.77]:Failed Sequence Reset to: 9
+APP_FINANCEIRO.exe: 0000091C: 15:44:31 [192.168.25.77]:Failed Sequence Recovery: SeqId: 10, Event: tap
+APP_FINANCEIRO.exe: 0000091C: 15:44:31 [192.168.25.77]:Processing: Id: 10, Evt: tap
+APP_FINANCEIRO.exe: 0000091C: 15:44:31 [192.168.25.77]:Processed: Id: 10, Evt: tap, [9GXAyQllyT1036A4CDE]

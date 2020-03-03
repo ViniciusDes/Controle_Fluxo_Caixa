@@ -1,0 +1,24 @@
+APP_FINANCEIRO.exe: 00001270: 23:23:09 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001270: 23:23:09 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001270: 23:23:09 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001270: 23:23:09 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00001270: 23:23:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001270: 23:23:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000006CC: 23:24:31 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000006CC: 23:24:31 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000006CC: 23:24:31 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000006CC: 23:24:31 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+APP_FINANCEIRO.exe: 000006CC: 23:24:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000006CC: 23:24:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000D78: 23:25:15 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000D78: 23:25:15 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000D78: 23:25:15 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000D78: 23:25:15 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00000D78: 23:25:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000D78: 23:25:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000175C: 23:25:18 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E029
+APP_FINANCEIRO.exe: 000015CC: 23:25:24 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E029
+APP_FINANCEIRO.exe: 00000DF0: 23:25:24 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E029
+APP_FINANCEIRO.exe: 0000167C: 23:25:25 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E029
+APP_FINANCEIRO.exe: 000012D8: 23:25:26 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E029
+APP_FINANCEIRO.exe: 00001684: 23:25:27 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E029

@@ -1,0 +1,22 @@
+APP_FINANCEIRO.exe: 000019B4: 15:58:24 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000019B4: 15:58:24 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000019B4: 15:58:24 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000019B4: 15:58:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000019B4: 15:58:56 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. Address and port are already in use. : Addr: $006F58BA
+APP_FINANCEIRO.exe: 000019B4: 15:58:59 [TUniServerModule]:Shutting Down Server.
+APP_FINANCEIRO.exe: 000019B4: 15:58:59 [TUniServerModule]:Stopping HTTP Server.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniServerModule]:HTTP Server Stopped.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniGUISessionManager]:Terminating Session manager.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniGUISessionManager]:Stopping Cache Eraser...
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniGUISessionManager]:Cache Eraser Stopped.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniGUISessionManager]:Destroying Worker Threads.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniGUISessionManager]:Session manager terminated.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [TUniServerModule]:Server Shutdown Completed.
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 []:<-------------------------------------------------------------->
+APP_FINANCEIRO.exe: 000019B4: 15:59:00 [Terminated]:Exit Code: 0
+APP_FINANCEIRO.exe: 000015B4: 15:59:11 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000015B4: 15:59:11 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000015B4: 15:59:11 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000015B4: 15:59:11 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000015B4: 15:59:11 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001BE0: 15:59:19 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $007B419A

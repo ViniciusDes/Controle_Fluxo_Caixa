@@ -1,0 +1,7 @@
+APP_FINANCEIRO.exe: 00001644: 14:02:25 [192.168.25.97]:Failed Sequence Recovery: SeqId: 8, Event: tap
+APP_FINANCEIRO.exe: 00001644: 14:02:30 [192.168.25.97]:Sequence sent from cache:  SeqId: 8
+APP_FINANCEIRO.exe: 00001644: 14:02:30 [192.168.25.97]:Processed: Id: 8, Evt: tap, [9rWfUgdV7J1039C8C23]
+APP_FINANCEIRO.exe: 000005D8: 14:03:22 [192.168.25.97]:Failed Sequence Recovery: SeqId: 13, Event: tap
+APP_FINANCEIRO.exe: 00000FA4: 14:03:57 [192.168.25.97]:Failed Sequence Recovery: SeqId: 13, Event: tap
+APP_FINANCEIRO.exe: 000013A0: 14:11:16 [192.168.25.171]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 000002E4: 14:11:41 [192.168.25.171]:Failed Sequence Recovery: SeqId: 6, Event: vpsize

@@ -1,0 +1,37 @@
+APP_FINANCEIRO.exe: 00000710: 00:15:34 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000710: 00:15:34 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000710: 00:15:34 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000710: 00:15:34 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00000710: 00:15:34 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000710: 00:15:34 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000C34: 00:16:56 [HandleFileRequest[192.168.43.251]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00000F54: 00:17:36 [Parameter 'pFuncLogado' not found-192.168.43.251]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7
+APP_FINANCEIRO.exe: 00000738: 00:23:10 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000738: 00:23:10 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000738: 00:23:10 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000738: 00:23:10 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+APP_FINANCEIRO.exe: 00000738: 00:23:10 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000738: 00:23:10 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001140: 00:23:44 [192.168.43.251]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7
+APP_FINANCEIRO.exe: 00000AD8: 00:24:39 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000AD8: 00:24:39 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000AD8: 00:24:39 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000AD8: 00:24:39 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+APP_FINANCEIRO.exe: 00000AD8: 00:24:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000AD8: 00:24:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001104: 00:24:44 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 00001128: 00:27:34 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001128: 00:27:34 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001128: 00:27:34 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001128: 00:27:34 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+APP_FINANCEIRO.exe: 00001128: 00:27:34 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001128: 00:27:35 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000015C4: 00:28:10 [192.168.43.251]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7
+APP_FINANCEIRO.exe: 000016F8: 00:29:45 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000016F8: 00:29:45 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000016F8: 00:29:45 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000016F8: 00:29:45 [TUniServerModule]:Global Cache Folder Erased. <9> Files deleted.
+APP_FINANCEIRO.exe: 000016F8: 00:29:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000016F8: 00:29:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000D5C: 00:29:49 [192.168.43.251]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079E1E1
+APP_FINANCEIRO.exe: 00000C34: 00:29:57 [Parameter 'pFuncLogado' not found-192.168.43.251]:EDatabaseError : Parameter 'pFuncLogado' not found : Addr: $006331F7

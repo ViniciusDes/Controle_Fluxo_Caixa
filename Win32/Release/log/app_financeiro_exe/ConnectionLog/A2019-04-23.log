@@ -1,0 +1,12 @@
+APP_FINANCEIRO.exe: 00000A1C: 10:03:36 [192.168.25.97]:Failed Sequence Recovery: SeqId: 5, Event: tap
+APP_FINANCEIRO.exe: 00002740: 10:03:55 [192.168.25.97]:Failed Sequence Recovery: SeqId: 6, Event: tap
+APP_FINANCEIRO.exe: 00001CD0: 10:04:02 [192.168.25.97]:Failed Sequence Recovery: SeqId: 7, Event: tap
+APP_FINANCEIRO.exe: 00000A1C: 10:04:14 [192.168.25.97]:Aborted
+APP_FINANCEIRO.exe: 00002740: 10:04:14 [192.168.25.97]:Aborted
+APP_FINANCEIRO.exe: 00001CD0: 10:04:14 [192.168.25.97]:Aborted
+APP_FINANCEIRO.exe: 00001C58: 10:06:20 [192.168.25.97]:Failed Sequence Recovery: SeqId: 24, Event: tap
+APP_FINANCEIRO.exe: 00001C58: 10:06:37 [192.168.25.97]:Aborted
+APP_FINANCEIRO.exe: 00001428: 10:16:07 [192.168.25.97]:Failed Sequence Recovery: SeqId: 2, Event: tap
+APP_FINANCEIRO.exe: 000015B0: 10:16:32 [192.168.25.97]:Failed Sequence Recovery: SeqId: 3, Event: tap
+APP_FINANCEIRO.exe: 00001428: 10:16:39 [192.168.25.97]:Aborted
+APP_FINANCEIRO.exe: 000015B0: 10:16:39 [192.168.25.97]:Aborted

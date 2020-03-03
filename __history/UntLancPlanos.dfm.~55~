@@ -1,0 +1,239 @@
+object FrmLancPlanos: TFrmLancPlanos
+  Left = 0
+  Top = 0
+  ClientHeight = 501
+  ClientWidth = 372
+  Caption = 'Lan'#231'amentos'
+  OnShow = UnimFormShow
+  DisplayCaption = False
+  TitleButtons = <>
+  OnCreate = UnimFormCreate
+  OnClose = UnimFormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object UnimDBDatePicker1: TUnimDBDatePicker
+    Left = 0
+    Top = 0
+    Width = 372
+    Height = 47
+    Hint = ''
+    DataField = 'DATA_MOV'
+    DataSource = DataSourceCaixaMOv
+    Align = alTop
+    DateFormat = 'dd/MM/yyyy'
+    Date = 43584.000000000000000000
+  end
+  object UnimLabel2: TUnimLabel
+    Left = 8
+    Top = 56
+    Width = 137
+    Height = 25
+    Hint = ''
+    AutoSize = False
+    Caption = 'Hist'#243'rico'
+    ParentFont = False
+    Font.Color = clBlue
+  end
+  object UnimDBEdit1: TUnimDBEdit
+    Left = 8
+    Top = 87
+    Width = 336
+    Height = 41
+    Hint = ''
+    DataField = 'HISTORICO'
+    DataSource = DataSourceCaixaMOv
+    TabOrder = 1
+  end
+  object EditNomePlano: TUnimDBEdit
+    Left = 112
+    Top = 134
+    Width = 232
+    Height = 47
+    Hint = ''
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object UnimBitBtn1: TUnimBitBtn
+    Left = 8
+    Top = 134
+    Width = 82
+    Height = 47
+    Hint = ''
+    Caption = 'Planos'
+    OnClick = UnimBitBtn1Click
+  end
+  object EditNomeSBPlano: TUnimDBEdit
+    Left = 112
+    Top = 187
+    Width = 232
+    Height = 47
+    Hint = ''
+    ReadOnly = True
+    TabOrder = 8
+  end
+  object EditTipoPlano: TUnimEdit
+    Left = 112
+    Top = 240
+    Width = 232
+    Height = 25
+    Hint = ''
+    Text = 'Tipo de plano:'
+    ParentFont = False
+    Font.Color = clBlue
+    Font.Height = -13
+    TabOrder = 11
+  end
+  object CheckEntrada: TUnimCheckBox
+    Left = 8
+    Top = 269
+    Width = 161
+    Height = 20
+    Hint = ''
+    FieldLabel = 'Cr'#233'dito'
+    FieldLabelFont.Color = clLime
+    Caption = 'Cr'#233'dito'
+    ClientEvents.Enabled = False
+  end
+  object CheckSaida: TUnimCheckBox
+    Left = 8
+    Top = 300
+    Width = 161
+    Height = 20
+    Hint = ''
+    FieldLabel = 'D'#233'bito'
+    FieldLabelFont.Color = clRed
+    Caption = 'D'#233'bito'
+    ClientEvents.Enabled = False
+  end
+  object EditValorLanc: TUnimDBEdit
+    Left = 112
+    Top = 329
+    Width = 153
+    Height = 41
+    Hint = ''
+    DataField = 'VALOR'
+    DataSource = DataSourceCaixaMOv
+    TabOrder = 4
+  end
+  object UnimLabel1: TUnimLabel
+    Left = 65
+    Top = 329
+    Width = 25
+    Height = 41
+    Hint = ''
+    AutoSize = False
+    Caption = 'R$'
+    ParentFont = False
+    Font.Color = clLime
+    Font.Height = -24
+  end
+  object UnimButton1: TUnimButton
+    Left = 112
+    Top = 384
+    Width = 153
+    Height = 47
+    Hint = ''
+    Caption = 'Confirmar'
+    OnClick = UnimButton1Click
+  end
+  object QryFunc: TSQLQuery
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      'select * from funcionario')
+    Left = 24
+    Top = 376
+  end
+  object ProviderFunc: TDataSetProvider
+    DataSet = QryFunc
+    Left = 96
+    Top = 376
+  end
+  object DataSetFunc: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderFunc'
+    Left = 160
+    Top = 376
+  end
+  object DataSourceFunc: TDataSource
+    DataSet = DataSetFunc
+    Left = 232
+    Top = 376
+  end
+  object QryCaixaMov: TSQLQuery
+    DataSource = DataSourceCaixaMOv
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from caixa_mov'
+      'where data_mov = current_date')
+    Left = 24
+    Top = 440
+  end
+  object providerCaixaMov: TDataSetProvider
+    DataSet = QryCaixaMov
+    Left = 96
+    Top = 440
+  end
+  object DataSetCaixaMov: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'providerCaixaMov'
+    Left = 160
+    Top = 440
+  end
+  object DataSourceCaixaMOv: TDataSource
+    DataSet = DataSetCaixaMov
+    Left = 224
+    Top = 448
+  end
+  object QryContas: TSQLQuery
+    DataSource = DataSourceContas
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      'select * from conta_movimento')
+    Left = 24
+    Top = 312
+    object QryContasID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QryContasDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+    end
+    object QryContasEMPRESA: TIntegerField
+      FieldName = 'EMPRESA'
+      Required = True
+    end
+    object QryContasSALDO: TFloatField
+      FieldName = 'SALDO'
+    end
+    object QryContasNAO_EXIBIR_REL: TStringField
+      FieldName = 'NAO_EXIBIR_REL'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object ProviderContas: TDataSetProvider
+    DataSet = QryContas
+    Left = 96
+    Top = 312
+  end
+  object DataSetContas: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderContas'
+    Left = 160
+    Top = 312
+  end
+  object DataSourceContas: TDataSource
+    DataSet = DataSetContas
+    Left = 224
+    Top = 312
+  end
+end

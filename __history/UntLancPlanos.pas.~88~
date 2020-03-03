@@ -1,0 +1,461 @@
+unit UntLancPlanos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Data.DBXFirebird, Data.FMTBcd, uniButton, uniBitBtn, unimBitBtn, Data.DB,
+  Datasnap.DBClient, Datasnap.Provider, Data.SqlExpr, uniLabel, unimLabel,
+  uniEdit, uniDBEdit, unimDBEdit, uniGUIBaseClasses, uniDateTimePicker,
+  uniDBDateTimePicker, unimDBDatePicker, uniRadioButton, uniCheckBox,
+  unimCheckBox, unimButton, UntPrincipalEscolha, unimRadio, SqlTimSt, unimEdit;
+
+type
+  TFrmLancPlanos = class(TUnimForm)
+    UnimDBDatePicker1: TUnimDBDatePicker;
+    UnimDBEdit1: TUnimDBEdit;
+    QryFunc: TSQLQuery;
+    ProviderFunc: TDataSetProvider;
+    DataSetFunc: TClientDataSet;
+    DataSourceFunc: TDataSource;
+    QryCaixaMov: TSQLQuery;
+    providerCaixaMov: TDataSetProvider;
+    DataSetCaixaMov: TClientDataSet;
+    DataSourceCaixaMOv: TDataSource;
+    UnimBitBtn1: TUnimBitBtn;
+    EditNomePlano: TUnimDBEdit;
+    EditValorLanc: TUnimDBEdit;
+    UnimLabel2: TUnimLabel;
+    EditNomeSBPlano: TUnimDBEdit;
+    UnimButton1: TUnimButton;
+    QryContas: TSQLQuery;
+    ProviderContas: TDataSetProvider;
+    DataSetContas: TClientDataSet;
+    DataSourceContas: TDataSource;
+    QryContasID: TIntegerField;
+    QryContasDESCRICAO: TStringField;
+    QryContasEMPRESA: TIntegerField;
+    QryContasSALDO: TFloatField;
+    QryContasNAO_EXIBIR_REL: TStringField;
+    UnimLabel1: TUnimLabel;
+    EditTipoPlano: TUnimEdit;
+    procedure UnimBitBtn1Click(Sender: TObject);
+    procedure UnimButton1Click(Sender: TObject);
+    procedure ativaDataSet;
+    procedure DesativaDataSet;
+    procedure AtualizaSaldo(xSaldo: double; PidConta: integer);
+    procedure UnimFormShow(Sender: TObject);
+    procedure UnimFormCreate(Sender: TObject);
+  private
+ function GenID(pTabela :string):integer;
+ function RetornIDFuncionario(pFunc: integer): integer;
+ function RetornIDCaixa(pCx: string): integer ;
+ function SomarSaldoAnterior(pSaldo:integer):double;
+ FUNCTION RetornID(pUs: string):integer;
+ function SelecionarIdPlano(PidPlano: string): integer;
+ function SelecionarIdsubPlano(PidsbPlano: integer): integer;
+ function SelecionarTipoPlano(PtipoPlano: Integer): string;
+ function SomarSaldoPosterior : double;
+ function SomarSaldoPosteriorTipoD : double;
+ function RetornarNomeConta(pIdconta: integer): string;
+
+
+    { Private declarations }
+  public
+    { Public declarations }
+      IdUsu: integer;
+      IdFunc: integer;
+      IdCaixa: integer;
+      saldoA :double;
+      dData : TDate;
+      DescPlano : string;
+      idplano: integer;
+      DescSBPlano : string;
+      idSubPlano : integer;
+      TipoPlano: String;
+      ValorInf : double;
+      RecbesaldoPost : double;
+      RecbesaldoPostTipoD: double;
+      RecbesaldoPostTipoN: double;
+      TxtConta : string;
+      pHora : ttime;
+  end;
+
+
+
+
+function FrmLancPlanos: TFrmLancPlanos;
+
+
+
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, UntGridPlanos, Mainm;
+
+function FrmLancPlanos: TFrmLancPlanos;
+begin
+  Result := TFrmLancPlanos(UniMainModule.GetFormInstance(TFrmLancPlanos));
+end;
+
+procedure TFrmLancPlanos.UnimBitBtn1Click(Sender: TObject);
+begin
+  QryCaixaMov.Close;
+  dataSourceCaixaMOv.DataSet.Close;
+
+   FrmGridPlanos.ShowModal;
+   FrmGridPlanos.SQLQuery1.SQLConnection := MainmFormLogin.conexao;
+   FrmGridPlanos.QueryPlanos.SQLConnection := MainmFormLogin.conexao;
+   FrmGridPlanos.QuerySubplano.SQLConnection := MainmFormLogin.conexao;
+
+
+    FrmGridPlanos.QueryPlanos.open;
+    FrmGridPlanos.QueryPlanos.DisableControls;
+    FrmGridPlanos.QueryPlanos.First;
+    while not FrmGridPlanos.queryplanos.Eof do
+        begin
+         FrmGridPlanos.UnimSelect1.Items.Add(FrmGridPlanos.QueryPlanos.FieldByName('DESCRICAO').AsString);
+         FrmGridPlanos.QueryPlanos.next;
+        end;
+
+    FrmGridPlanos.queryplanos.First;
+    FrmGridPlanos.QueryPlanos.EnableControls;
+
+    QryFunc.SQLConnection := MainmFormLogin.conexao;
+    QryCaixaMov.SQLConnection := MainmFormLogin.conexao;
+    QryContas.SQLConnection := MainmFormLogin.conexao;
+
+    dData := date();
+    QryCaixaMov.Open;
+    dataSourceCaixaMOv.DataSet.Close;
+    dataSourceCaixaMOv.DataSet.DisableControls;
+    DataSourceCaixaMOv.DataSet.Open;
+    DataSetCaixaMov.Insert;
+    DataSetCaixaMov.FieldByName('ID').AsInteger := GenID('CAIXA_MOV');
+    DataSetCaixaMov.FieldByName('ID_CAIXA').AsInteger := RetornIDCaixa(TxtConta);
+
+    if RetornIDFuncionario(IdCaixa) = 0 then
+    begin
+    DataSetCaixaMov.FieldByName('IDFUNC').AsInteger := 99;
+    end
+    else
+    DataSetCaixaMov.FieldByName('IDFUNC').AsInteger := RetornIDFuncionario(IdCaixa);
+    dataSourceCaixaMOv.DataSet.EnableControls;
+
+end;
+
+
+procedure TFrmLancPlanos.UnimButton1Click(Sender: TObject);
+var nomeplano : string;
+begin
+    nomeplano := FrmGridPlanos.UnimSelect1.Text;
+    DescPlano := EditNomePlano.Text;
+    DescSBPlano := EditNomeSBPlano.Text;
+    idplano := SelecionarIdPlano(DescPlano);
+    TipoPlano := SelecionarTipoPlano(idplano);
+    ValorInf := (strtofloat(EditValorLanc.Text));
+    DataSetCaixaMov.FieldByName('DC').AsString := TipoPlano;
+
+     if UnimDBEdit1.Text = '' then
+     begin
+        DataSetCaixaMov.FieldByName('HISTORICO').AsString := 'LANÇAMENTOS PLANO';
+     end
+     else
+     dataSetCaixaMov.FieldByName('HISTORICO').AsString := EditValorLanc.text;
+
+    DataSetCaixaMov.FieldByName('ORIGEM').AsString := '';
+    DataSetCaixaMov.FieldByName('IDPLANO').asinteger := iDplano;
+    DataSetCaixaMov.FieldByName('IDSUBPLANO').asinteger := SelecionarIdsubPlano(idplano);
+
+    if EditNomeSBPlano.Text = '' then
+    begin
+      ShowMessage('Informe um Plano e SubPlano para o lançamento');
+    end
+    else
+    DataSetCaixaMov.FieldByName('DESC_SUBPLANO').asString := EditNomeSBPlano.Text;
+    RecbesaldoPost := SomarSaldoPosterior;
+    DataSetCaixaMov.FieldByName('SALDO_ANTERIOR').AsFloat := SomarSaldoAnterior(IdCaixa);
+
+    if TipoPlano = 'C' then
+    begin
+        DataSetCaixaMov.FieldByName('SALDO_POSTERIOR').AsFloat := RecbesaldoPost; //somando valor da conta + informado
+        AtualizaSaldo(RecbesaldoPost,IdCaixa);
+    end;
+
+    if TipoPlano = 'D' then
+    begin
+       RecbesaldoPostTipoD := SomarSaldoPosteriorTipoD;
+       DataSetCaixaMov.FieldByName('SALDO_POSTERIOR').AsFloat := SomarSaldoPosteriorTipoD;  //debitando valor - valor informado
+        AtualizaSaldo(RecbesaldoPostTipoD,IdCaixa);
+    end;
+
+    if TipoPlano = 'N' then
+    begin
+       RecbesaldoPostTipoN := SomarSaldoAnterior(IdCaixa);
+       DataSetCaixaMov.FieldByName('SALDO_POSTERIOR').AsFloat := SomarSaldoAnterior(IdCaixa);  //apenas permanece valor da conta
+       AtualizaSaldo(RecbesaldoPostTipoN,IdCaixa);
+    end;
+
+    dData := date();
+    pHora := time();
+    UnimDBDatePicker1.Date := dData;
+    DataSetCaixaMov.FieldByName('DATA_MOV').AsDateTime :=  UnimDBDatePicker1.date;
+    DataSetCaixaMov.FieldByName('HORA_MOV').AsDateTime := pHora;
+    DataSetCaixaMov.Post;
+    DataSetCaixaMov.ApplyUpdates(0);
+    ShowMessage('lançamento concluido com sucesso!');
+end;
+
+procedure TFrmLancPlanos.UnimFormCreate(Sender: TObject);
+begin
+    TxtConta := FrmPrincipalEscolha.UnimSelect1.Text;
+    UnimButton1.Enabled := FALSE;
+    QryFunc.SQLConnection := MainmFormLogin.conexao;
+    QryCaixaMov.SQLConnection := MainmFormLogin.conexao;
+    QryContas.SQLConnection := MainmFormLogin.conexao;
+
+end;
+
+procedure TFrmLancPlanos.UnimFormShow(Sender: TObject);
+begin
+   IdUsu   := RetornID(MainmFormLogin.editusuario.Text);
+   IdCaixa := RetornIDCaixa(TxtConta);
+   IdFunc  := RetornIDFuncionario(IdCaixa);
+   saldoA  := SomarSaldoAnterior(IdCaixa);
+   dData := date();
+   UnimDBEdit1.Text := '';
+   EditValorLanc.Text := '';  
+   UnimDBDatePicker1.Date := Date();
+
+
+end;
+
+function tFrmLancPlanos.GenID(pTabela :string):integer;
+  var Q: TSqlQuery;
+  begin
+    Q := TSqlQuery.Create(nil);
+    begin
+      try
+        Q.SQLConnection :=  MainmFormLogin.conexao;
+        Q.Sql.Add('select gen_id('+Ptabela+'_ID,1) FROM RDB$DATABASE');
+        Q.OPEN;
+        Result := Q.FieldByName('GEN_ID').AsInteger;
+      finally
+      freeandnil(Q)
+
+      end;
+    end;
+  end;
+
+     function TFrmLancPlanos.RetornIDFuncionario(pFunc: integer): integer;
+  var Q : TSQLQuery;
+
+ begin  //Retornar Id Funcionario
+  Q := TSQLQuery.Create(nil);
+    begin
+      try
+        Q.SQLConnection := MainmFormLogin.Conexao;
+        Q.SQL.Add('SELECT FUNCIONARIO.id FROM FUNCIONARIO WHERE FUNCIONARIO.conta_movimento = :pFuncLogado');
+        q.Params.ParamByName('pFuncLogado').Asfloat := (pFunc);
+        Q.Open;
+        Result := Q.FieldByName('ID').AsInteger;
+       finally
+        FreeAndNil(Q);
+      end;
+     end;
+
+  end;
+
+       function TFrmLancPlanos.RetornIDCaixa(pCx: string): integer;
+  var Q : TSQLQuery;
+
+ begin  //Retornar Id Caixa
+  Q := TSQLQuery.Create(nil);
+    begin
+
+       try
+        Q.SQLConnection := MainmFormLogin.conexao;
+        Q.SQL.Add('select conta_movimento.id from conta_movimento where conta_movimento.descricao = :pCaixa');
+        q.Params.ParamByName('pCaixa').asstring := (pCx);
+        Q.Open;
+        Result := Q.FieldByName('ID').AsInteger;
+       finally
+
+        FreeAndNil(Q);
+      end;
+     end;
+
+  end;
+
+
+  function TFrmLancPlanos.SomarSaldoAnterior(pSaldo:integer):double;
+var
+ Q : TSqlQuery;
+ begin
+  try
+    Q := TSQLQuery.Create(nil);
+    Q.SQLConnection := MainmFormLogin.conexao;
+    Q.SQL.Add('select conta_movimento.saldo from conta_movimento where conta_movimento.id = :nSaldo');
+    Q.Params.ParamByName('nSaldo').AsInteger := (psaldo);
+    Q.Open;
+     Result := Q.FieldByName('SALDO').AsFloat;
+  finally
+     FreeAndNil(Q);
+  end;
+ end;
+
+ function TFrmLancPlanos.RetornID(pUs: string): integer;
+  var Q : TSQLQuery;
+
+ begin  //Retornar Id usuario
+  Q := TSQLQuery.Create(nil);
+    begin
+
+       try
+        Q.SQLConnection := MainmFormLogin.Conexao;
+        Q.SQL.Add('select usuarios.id from usuarios where usuarios.usuario = :pUsLogado');
+        q.Params.ParamByName('pUsLogado').AsString := (pUs);
+        Q.Open;
+        Result := Q.FieldByName('ID').AsInteger;
+       finally
+
+        FreeAndNil(Q);
+      end;
+     end;
+
+  end;
+
+  function TFrmLancPlanos.SelecionarIdPlano(PidPlano: string): integer;
+ var Q: TSQLQuery;
+ begin
+  Q := TSQLQuery.Create(nil);
+    begin
+     try
+       q.SQLConnection := MainmFormLogin.conexao;
+       q.sql.Add('select plano.id from plano where plano.descricao = :NidPlano ');
+       q.Params.ParamByName('nIdplano').AsString := (PidPlano);
+       q.Open;
+       result := q.FieldByName('ID').AsInteger;
+       finally
+        freeandnil(Q);
+     end;
+    end;
+
+ end;
+
+  function TFrmLancPlanos.SelecionarIdsubPlano(PidsbPlano: integer): integer;
+ var Q: TSQLQuery;
+ begin
+  Q := TSQLQuery.Create(nil);
+    begin
+     try
+       q.SQLConnection := MainmFormLogin.conexao;
+       q.sql.Add('select subplano.id from subplano where subplano.id_plano = :NidsbPlano ');
+       q.Params.ParamByName('nIdsbplano').AsInteger := (PidsbPlano);
+       q.Open;
+       result := q.FieldByName('ID').AsInteger;
+       finally
+        freeandnil(Q);
+     end;
+    end;
+
+ end;
+
+
+  function TFrmLancPlanos.SelecionarTipoPlano(PtipoPlano: Integer): string;
+ var Q: TSQLQuery;
+ begin
+  Q := TSQLQuery.Create(nil);
+    begin
+     try
+       q.SQLConnection := MainmFormLogin.conexao;
+       q.sql.Add('select plano.tipo from plano where plano.id = :NtipoPlano ');
+       q.Params.ParamByName('nTipoplano').asinteger := (PtipoPlano);
+       q.Open;
+       result := q.FieldByName('TIPO').Asstring;
+       finally
+        freeandnil(Q);
+     end;
+    end;
+
+ end;
+
+ procedure TFrmLancPlanos.ativaDataSet;
+ begin
+    DataSetContas.active := true;
+    DataSetFunc.active := true;
+    DataSetCaixaMov.active := true;
+ end;
+
+   procedure TFrmLancPlanos.DesativaDataSet;
+  begin
+     DataSetContas.active := false;
+    DataSetFunc.active := false;
+    DataSetCaixaMov.active := false;
+   end;
+
+   function tFrmLancPlanos.SomarSaldoPosterior;
+var  saldoA, saldoP, saldototal: double;
+
+begin
+    saldoA := SomarSaldoAnterior(IdCaixa);
+    saldop :=  ValorInf ;
+    saldototal :=(saldoA + saldoP);
+    result := saldototal;
+end;
+
+ function tFrmLancPlanos.SomarSaldoPosteriorTipoD : double;
+var  saldoA, saldoP, saldototal: double;
+
+begin
+    saldoA := SomarSaldoAnterior(IdCaixa);
+    saldop :=  ValorInf ;
+    saldototal :=(saldoA - saldoP);
+    result := saldototal;
+end;
+
+
+
+procedure tFrmLancPlanos.AtualizaSaldo(xSaldo: double; PidConta: integer);
+var Q: TSQLQUERY;
+begin
+  try
+     Q := QryContas;
+     QryContas.Close;
+     DataSetContas.Close;
+     Q.Close;
+     Q.SQL.Clear;
+     Q.SQL.Add('update conta_movimento set conta_movimento.saldo = :pSaldoT where conta_movimento.id = :nIdConta');
+     Q.Params.ParamByName('pSaldoT').Asfloat := (xSaldo);
+     Q.Params.ParamByName('nIdConta').Asinteger := (pidConta);
+        Q.ExecSQL(false);
+    finally
+   end;
+  end;
+
+function tFrmLancPlanos.RetornarNomeConta(pIdconta: integer): string;
+var Q: TSQLQuery;
+ begin
+  Q := TSQLQuery.Create(nil);
+    begin
+     try
+       q.SQLConnection := MainmFormLogin.conexao;
+       q.sql.Add('select conta_movimento.descricao' +
+                  'from conta_movimento.descricao' +
+                  'where conta_movimento.id = :nIdConta');
+       q.Params.ParamByName('nTipoplano').asinteger := (pIdconta);
+       q.Open;
+       result := q.FieldByName('DESCRICAO').Asstring;
+       finally
+        freeandnil(Q);
+     end;
+    end;
+
+ end;
+end.
+

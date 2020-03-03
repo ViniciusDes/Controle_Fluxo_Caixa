@@ -1,0 +1,42 @@
+APP_FINANCEIRO.exe: 000012BC: 09:19:22 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 000012BC: 09:19:22 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 000012BC: 09:19:22 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 000012BC: 09:19:22 [TUniServerModule]:Global Cache Folder Erased. <10> Files deleted.
+APP_FINANCEIRO.exe: 000012BC: 09:19:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 000012BC: 09:19:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00000B94: 13:06:15 [HandleFileRequest[192.168.25.97]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00000A94: 14:21:45 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00001224: 15:06:28 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001224: 15:06:28 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001224: 15:06:28 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001224: 15:06:28 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00001224: 15:06:28 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001224: 15:06:28 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001340: 15:06:39 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000A58: 15:09:31 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000A58: 15:09:31 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000A58: 15:09:31 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000A58: 15:09:31 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+APP_FINANCEIRO.exe: 00000A58: 15:09:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000A58: 15:09:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000012FC: 15:10:10 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 00000F38: 15:11:04 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000F38: 15:11:04 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000F38: 15:11:04 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000F38: 15:11:04 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00000F38: 15:11:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000F38: 15:11:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 000011A4: 15:11:10 [192.168.25.97]:EUniSessionException : Invalid session or session Timeout. : Addr: $0079CFCE
+APP_FINANCEIRO.exe: 0000073C: 15:11:54 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 0000073C: 15:11:54 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 0000073C: 15:11:54 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 0000073C: 15:11:54 [TUniServerModule]:Global Cache Folder Erased. <4> Files deleted.
+APP_FINANCEIRO.exe: 0000073C: 15:11:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 0000073C: 15:11:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 0000130C: 15:22:43 [HandleFileRequest[192.168.25.216]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00000FDC: 20:42:09 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00000FDC: 20:42:09 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00000FDC: 20:42:09 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00000FDC: 20:42:09 [TUniServerModule]:Global Cache Folder Erased. <2> Files deleted.
+APP_FINANCEIRO.exe: 00000FDC: 20:42:10 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00000FDC: 20:42:10 [TUniServerModule]:HTTP Server Started on Port: 8077

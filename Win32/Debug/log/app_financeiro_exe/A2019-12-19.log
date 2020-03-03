@@ -1,0 +1,8 @@
+APP_FINANCEIRO.exe: 00001E98: 10:34:53 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001E98: 10:34:53 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001E98: 10:34:53 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001E98: 10:34:53 [TUniServerModule]:Global Cache Folder Erased. <8> Files deleted.
+APP_FINANCEIRO.exe: 00001E98: 10:34:53 [TUniServerModule]:Starting HTTP Server on Port: 8079...
+APP_FINANCEIRO.exe: 00001E98: 10:34:53 [TUniServerModule]:HTTP Server Started on Port: 8079
+APP_FINANCEIRO.exe: 00003668: 10:36:31 [HandleFileRequest[192.168.25.120]]:File not found: C:\Users\Vinicius\Downloads\SISTEMA ETICA-20190924T172256Z-001\SISTEMA ETICA\Win32\Debug\favicon.ico
+APP_FINANCEIRO.exe: 00002A28: 10:43:01 [192.168.25.120]:EDatabaseError : Field 'IDFUNC' must have a value : Addr: $006351A7

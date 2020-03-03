@@ -1,0 +1,6 @@
+APP_FINANCEIRO.exe: 00001670: 15:37:36 []:>--------------------------------------------------------------<
+APP_FINANCEIRO.exe: 00001670: 15:37:36 [TUniServerModule]:Server First Init.
+APP_FINANCEIRO.exe: 00001670: 15:37:36 [TUniServerModule]:Debug Mode = ON
+APP_FINANCEIRO.exe: 00001670: 15:37:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+APP_FINANCEIRO.exe: 00001670: 15:37:37 [TUniServerModule]:HTTP Server Started on Port: 8077
+APP_FINANCEIRO.exe: 00001714: 15:37:45 [HandleFileRequest[192.168.25.97]]:File not found: C:\SISTEMA ETICA\Win32\Debug\favicon.ico

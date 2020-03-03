@@ -1,0 +1,267 @@
+unit UntGridPlanos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  Data.DBXFirebird, Data.FMTBcd, Data.DB, Datasnap.DBClient, Datasnap.Provider,
+  Data.SqlExpr, uniGUIBaseClasses, uniBasicGrid, uniDBGrid, unimDBListGrid,
+  unimDBGrid, uniEdit, uniDBEdit, unimDBEdit, uniMultiItem, unimSelect,
+  unimDBSelect, uniLabel, unimLabel, uniButton, uniBitBtn, unimBitBtn, unimList,
+  unimFieldSet;
+
+type
+  TFrmGridPlanos = class(TUnimForm)
+    QueryPlanos: TSQLQuery;
+    ProviderPlanos: TDataSetProvider;
+    DataSetPlanos: TClientDataSet;
+    SourcePlanos: TDataSource;
+    UnimDBEdit1: TUnimDBEdit;
+    QueryPlanosID: TIntegerField;
+    QueryPlanosDESCRICAO: TStringField;
+    QueryPlanosATIVO: TStringField;
+    QueryPlanosTIPO: TStringField;
+    DataSetPlanosID: TIntegerField;
+    DataSetPlanosDESCRICAO: TStringField;
+    DataSetPlanosATIVO: TStringField;
+    DataSetPlanosTIPO: TStringField;
+    QuerySubplano: TSQLQuery;
+    ProviderSubplano: TDataSetProvider;
+    DataSetSubplano: TClientDataSet;
+    IntegerField2: TIntegerField;
+    StringField4: TStringField;
+    StringField5: TStringField;
+    StringField6: TStringField;
+    SourceSubplano: TDataSource;
+    UnimDBEdit2: TUnimDBEdit;
+    UnimLabel1: TUnimLabel;
+    UnimLabel2: TUnimLabel;
+    BtnConfirmatr: TUnimBitBtn;
+    UnimSelect1: TUnimSelect;
+    UnimSelect2: TUnimSelect;
+    SQLQuery1: TSQLQuery;
+    ClientDataSet1: TClientDataSet;
+    IntegerField1: TIntegerField;
+    StringField1: TStringField;
+    StringField2: TStringField;
+    StringField3: TStringField;
+    SQLQuery1DESCRICAO: TStringField;
+    QuerySubplanoID: TIntegerField;
+    QuerySubplanoDESCRICAO: TStringField;
+    QuerySubplanoID_PLANO: TIntegerField;
+    QuerySubplanoATIVO: TStringField;
+    procedure UnimSelect1CloseUp(Sender: TObject);
+    procedure UnimSelect2CloseUp(Sender: TObject);
+    procedure UnimFormClose(Sender: TObject; var Action: TCloseAction);
+    procedure UnimFormCreate(Sender: TObject);
+    procedure UnimDBSelect1CloseUp(Sender: TObject);
+    procedure UnimSelect1Exit(Sender: TObject);
+    procedure UnimSelect2Exit(Sender: TObject);
+    procedure BtnConfirmatrClick(Sender: TObject);
+  private
+  function SelecionarIdPlano(PidPlano: string): integer;
+  function SelecionarSubPlano(pidSubPlano: integer): string;
+  function SelecionarTipoPlano(PtipoPlano: Integer): string;
+
+  public
+     iDplano : integer;
+  end;
+
+  var
+  DescPlano : string;
+  TipoPlano :string;
+
+  a : string;
+
+function FrmGridPlanos: TFrmGridPlanos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, UntLancPlanos, mainm;
+
+function FrmGridPlanos: TFrmGridPlanos;
+begin
+  Result := TFrmGridPlanos(UniMainModule.GetFormInstance(TFrmGridPlanos));
+end;
+
+procedure TFrmGridPlanos.UnimDBSelect1CloseUp(Sender: TObject);
+begin
+    DescPlano := UnimSelect1.Text;
+   iDplano :=  SelecionarIdPlano(DescPlano);
+   //UnimSelect2.Clear;
+   UnimSelect2.Items.Add(SelecionarSubPlano(iDplano));
+   //UnimDBEdit1.Text := UnimSelect1.Text;
+   //UnimDBEdit2.Clear;
+end;
+
+procedure TFrmGridPlanos.UnimFormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+   FrmGridPlanos.DataSetPlanos.Active := false;
+   FrmGridPlanos.DataSetSubplano.Active := false;
+   FrmLancPlanos.UnimButton1.Enabled := true;
+end;
+
+procedure TFrmGridPlanos.UnimFormCreate(Sender: TObject);
+begin
+ // UnimDBEdit1.Text := '';
+  //UnimDBEdit2.Text := '';
+  SQLQuery1.SQLConnection := MainmFormLogin.conexao;
+  QueryPlanos.SQLConnection := MainmFormLogin.conexao;
+  QuerySubplano.SQLConnection := MainmFormLogin.conexao;
+end;
+
+procedure TFrmGridPlanos.UnimSelect1CloseUp(Sender: TObject);
+begin
+    SQLQuery1.Active := true;
+    //FrmGridPlanos.DataSetSubplano.Active := true;
+     unimSelect2.Items.Clear
+end;
+
+procedure TFrmGridPlanos.UnimSelect1Exit(Sender: TObject);
+begin
+   UnimSelect2.Text := '';
+   DescPlano := UnimSelect1.Text;
+   SelecionarIdPlano(DescPlano);
+   iDplano :=  SelecionarIdPlano(DescPlano);
+   SQLQuery1.Params[0].AsInteger := iDplano;
+   UnimSelect2.Items.Clear;
+    SQLQuery1.DisableControls;
+    SQLQuery1.First;
+    while not SQLQuery1.Eof do
+        begin
+         SQLQuery1.Open;
+         UnimSelect2.Items.Add(SQLQuery1.FieldByName('DESCRICAO').AsString);
+         SQLQuery1.next;
+        end;
+    SQLQuery1.First;
+    SQLQuery1.EnableControls;
+
+    UnimSelect2.Text := '';
+   DescPlano := UnimSelect1.Text;
+   SelecionarIdPlano(DescPlano);
+   iDplano :=  SelecionarIdPlano(DescPlano);
+   SQLQuery1.Params[0].AsInteger := iDplano;
+   UnimSelect2.Items.Clear;
+    SQLQuery1.DisableControls;
+    SQLQuery1.First;
+    while not SQLQuery1.Eof do
+        begin
+         SQLQuery1.Open;
+         UnimSelect2.Items.Add(SQLQuery1.FieldByName('DESCRICAO').AsString);
+         SQLQuery1.next;
+        end;
+    SQLQuery1.First;
+    SQLQuery1.EnableControls;
+  UnimDBEdit1.Text := UnimSelect1.Text;
+   if UnimSelect1.Text = '' then
+   begin
+       UnimSelect2.Items.Add(SQLQuery1.FieldByName('DESCRICAO').AsString);
+       SQLQuery1.first;
+   end;
+
+
+
+
+end;
+
+procedure TFrmGridPlanos.UnimSelect2CloseUp(Sender: TObject);
+begin
+  // UnimSelect2.Items.Add(SelecionarSubPlano(iDplano));
+   //UnimDBEdit2.Text := UnimSelect2.Text;
+end;
+
+procedure TFrmGridPlanos.UnimSelect2Exit(Sender: TObject);
+begin
+   UnimDBEdit2.Text := UnimSelect2.Text;
+end;
+
+procedure TFrmGridPlanos.BtnConfirmatrClick(Sender: TObject);
+begin
+    iDplano :=  SelecionarIdPlano(DescPlano);
+   TipoPlano := SelecionarTipoPlano(idplano);
+   if TipoPlano = 'C'then
+   begin
+     FrmLancPlanos.EditTipoPlano.text := FrmLancPlanos.EditTipoPlano.text + ' Entrada'
+    // FrmLancPlanos.CheckEntrada.Checked := TRUE;
+   end
+   else
+     FrmLancPlanos.CheckEntrada.Checked := FALSE;
+   if TipoPlano = 'D' then
+   BEGIN
+       FrmLancPlanos.EditTipoPlano.text := FrmLancPlanos.EditTipoPlano.text + ' Saida'
+       //FrmLancPlanos.CheckSaida.Checked := TRUE;
+   END
+   ELSE
+    FrmLancPlanos.CheckSAIDA.Checked := FALSE;
+   //FrmLancPlanos.CheckEntrada.ReadOnly := true;
+
+
+   //FrmLancPlanos.TipoPlano := TipoPlano;
+
+   FrmLancPlanos.EditNomePlano.Text := UnimSelect1.Text;
+   FrmLancPlanos.EditNomesbPlano.Text := UnimSelect2.Text;
+  // FrmLancPlanos.CheckEntrada.Checked := true;
+   FrmGridPlanos.Close;
+end;
+
+function TFrmGridPlanos.SelecionarIdPlano(PidPlano: string): integer;
+ var Q: TSQLQuery;
+ begin
+  Q := TSQLQuery.Create(nil);
+    begin
+     try
+       q.SQLConnection := MainmFormLogin.conexao;
+       q.sql.Add('select plano.id from plano where plano.descricao = :NidPlano ');
+       q.Params.ParamByName('nIdplano').AsString := (PidPlano);
+       q.Open;
+       result := q.FieldByName('ID').AsInteger;
+       finally
+        freeandnil(Q);
+     end;
+    end;
+
+ end;
+
+function TFrmGridPlanos.SelecionarSubPlano(pidSubPlano: Integer): string;
+ var Q: TSQLQuery;
+ begin
+    Q := TSQLQuery.Create(nil);
+    try
+      q.SQLConnection := MainmFormLogin.conexao;
+      q.SQL.Add('select subplano.descricao from subplano where subplano.id_plano = :NidSubPlano');
+      q.Params.ParamByName('NidSubPlano').AsInteger := (pidSubPlano);
+      q.Open;
+      Result := q.FieldByName('DESCRICAO').AsString;
+    finally
+      FreeAndNil(Q);
+    end;
+ end;
+
+   function TFrmGridPlanos.SelecionarTipoPlano(PtipoPlano: Integer): string;
+ var Q: TSQLQuery;
+ begin
+  Q := TSQLQuery.Create(nil);
+    begin
+     try
+       q.SQLConnection := MainmFormLogin.conexao;
+       q.sql.Add('select plano.tipo from plano where plano.id = :NtipoPlano ');
+       q.Params.ParamByName('nTipoplano').asinteger := (PtipoPlano);
+       q.Open;
+       result := q.FieldByName('TIPO').Asstring;
+       finally
+        freeandnil(Q);
+       { if Result = 'D' then
+        begin
+          FrmLancPlanos.CheckSaida.Checked := true;
+        end; }
+     end;
+    end;
+
+ end;
+end.

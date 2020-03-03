@@ -1,0 +1,265 @@
+﻿object Frmlançamentos: TFrmlançamentos
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 320
+  Caption = 'Frmlan'#231'amentos'
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object ConectionCaixaMov: TSQLConnection
+    ConnectionName = 'FBConnection'
+    DriverName = 'Firebird'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver250.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXFirebirdMetaDataCommandFactory,DbxFire' +
+        'birdDriver250.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXFirebirdMetaDataCommandF' +
+        'actory,Borland.Data.DbxFirebirdDriver,Version=24.0.0.0,Culture=n' +
+        'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverINTERBASE'
+      'LibraryName=dbxfb.dll'
+      'LibraryNameOsx=libsqlfb.dylib'
+      'VendorLib=fbclient.dll'
+      'VendorLibWin64=fbclient.dll'
+      'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'TrimChar=False'
+      'DriverName=Firebird'
+      'Database=C:\SOFTWARE 2019\BANCO DE DADOS\dados.fdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'IsolationLevel=ReadCommitted'
+      'Trim Char=False')
+    Connected = True
+    Left = 24
+    Top = 264
+  end
+  object QueryCaixaMov: TSQLQuery
+    Active = True
+    DataSource = SourceCaixaMov
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from caixa_mov')
+    SQLConnection = ConectionCaixaMov
+    Left = 80
+    Top = 264
+    object QueryCaixaMovID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QueryCaixaMovID_CAIXA: TIntegerField
+      FieldName = 'ID_CAIXA'
+      Required = True
+    end
+    object QueryCaixaMovDATA_MOV: TSQLTimeStampField
+      FieldName = 'DATA_MOV'
+    end
+    object QueryCaixaMovHISTORICO: TStringField
+      FieldName = 'HISTORICO'
+      Size = 50
+    end
+    object QueryCaixaMovORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Size = 40
+    end
+    object QueryCaixaMovDC: TStringField
+      FieldName = 'DC'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryCaixaMovVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object QueryCaixaMovIDFUNC: TIntegerField
+      FieldName = 'IDFUNC'
+      Required = True
+    end
+    object QueryCaixaMovSALDO_ANTERIOR: TFloatField
+      FieldName = 'SALDO_ANTERIOR'
+    end
+    object QueryCaixaMovIDPLANO: TIntegerField
+      FieldName = 'IDPLANO'
+    end
+    object QueryCaixaMovIDSUBPLANO: TIntegerField
+      FieldName = 'IDSUBPLANO'
+    end
+    object QueryCaixaMovDESC_SUBPLANO: TStringField
+      FieldName = 'DESC_SUBPLANO'
+      Size = 40
+    end
+    object QueryCaixaMovSALDO_POSTERIOR: TFloatField
+      FieldName = 'SALDO_POSTERIOR'
+    end
+    object QueryCaixaMovHORA_MOV: TSQLTimeStampField
+      FieldName = 'HORA_MOV'
+    end
+  end
+  object ProviderCaixaMov: TDataSetProvider
+    DataSet = QueryCaixaMov
+    Left = 136
+    Top = 264
+  end
+  object DataSetMov: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderCaixaMov'
+    Left = 200
+    Top = 264
+    object DataSetMovID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object DataSetMovID_CAIXA: TIntegerField
+      FieldName = 'ID_CAIXA'
+      Required = True
+    end
+    object DataSetMovDATA_MOV: TSQLTimeStampField
+      FieldName = 'DATA_MOV'
+    end
+    object DataSetMovHISTORICO: TStringField
+      FieldName = 'HISTORICO'
+      Size = 50
+    end
+    object DataSetMovORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Size = 40
+    end
+    object DataSetMovDC: TStringField
+      FieldName = 'DC'
+      FixedChar = True
+      Size = 1
+    end
+    object DataSetMovVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object DataSetMovIDFUNC: TIntegerField
+      FieldName = 'IDFUNC'
+      Required = True
+    end
+    object DataSetMovSALDO_ANTERIOR: TFloatField
+      FieldName = 'SALDO_ANTERIOR'
+    end
+    object DataSetMovIDPLANO: TIntegerField
+      FieldName = 'IDPLANO'
+    end
+    object DataSetMovIDSUBPLANO: TIntegerField
+      FieldName = 'IDSUBPLANO'
+    end
+    object DataSetMovDESC_SUBPLANO: TStringField
+      FieldName = 'DESC_SUBPLANO'
+      Size = 40
+    end
+    object DataSetMovSALDO_POSTERIOR: TFloatField
+      FieldName = 'SALDO_POSTERIOR'
+    end
+    object DataSetMovHORA_MOV: TSQLTimeStampField
+      FieldName = 'HORA_MOV'
+    end
+  end
+  object SourceCaixaMov: TDataSource
+    DataSet = DataSetMov
+    Left = 256
+    Top = 264
+  end
+  object ConectionContas: TSQLConnection
+    ConnectionName = 'FBConnection'
+    DriverName = 'Firebird'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver250.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXFirebirdMetaDataCommandFactory,DbxFire' +
+        'birdDriver250.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXFirebirdMetaDataCommandF' +
+        'actory,Borland.Data.DbxFirebirdDriver,Version=24.0.0.0,Culture=n' +
+        'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverINTERBASE'
+      'LibraryName=dbxfb.dll'
+      'LibraryNameOsx=libsqlfb.dylib'
+      'VendorLib=fbclient.dll'
+      'VendorLibWin64=fbclient.dll'
+      'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'TrimChar=False'
+      'DriverName=Firebird'
+      'Database=C:\SOFTWARE 2019\BANCO DE DADOS\dados.fdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'IsolationLevel=ReadCommitted'
+      'Trim Char=False')
+    Connected = True
+    Left = 32
+    Top = 328
+  end
+  object QueryContas: TSQLQuery
+    Active = True
+    DataSource = SourseContas
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from conta_movimento')
+    SQLConnection = ConectionContas
+    Left = 88
+    Top = 328
+  end
+  object ProviderContas: TDataSetProvider
+    DataSet = QueryContas
+    Left = 144
+    Top = 328
+  end
+  object DataSetContas: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderContas'
+    Left = 208
+    Top = 328
+  end
+  object SourseContas: TDataSource
+    DataSet = DataSetContas
+    Left = 264
+    Top = 328
+  end
+end

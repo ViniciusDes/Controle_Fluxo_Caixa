@@ -1,0 +1,1235 @@
+object FrmLancamentos: TFrmLancamentos
+  AlignWithMargins = True
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 379
+  Caption = 'TRANSF.DE VALORES'
+  OnShow = UnimFormShow
+  DisplayCaption = False
+  TitleButtons = <>
+  OnCreate = UnimFormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object UnimDBDatePicker1: TUnimDBDatePicker
+    Left = 0
+    Top = 0
+    Width = 379
+    Height = 47
+    Hint = ''
+    DataField = 'DATA_MOV'
+    DataSource = SourceCaixaMov
+    Align = alTop
+    ReadOnly = True
+    DateFormat = 'dd/MM/yyyy'
+    Date = 43553.000000000000000000
+  end
+  object BtnIniciarTransf: TUnimBitBtn
+    Left = 0
+    Top = 47
+    Width = 379
+    Height = 47
+    Hint = ''
+    Align = alTop
+    Caption = 'INICIAR NOVA TRANSFERENCIA'
+    OnClick = BtnIniciarTransfClick
+  end
+  object UnimLabel1: TUnimLabel
+    Left = 8
+    Top = 104
+    Width = 65
+    Height = 41
+    Hint = ''
+    AutoSize = False
+    Caption = 'DE:'
+    ParentFont = False
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Style = [fsBold]
+  end
+  object UnimSelect1: TUnimSelect
+    Left = 102
+    Top = 107
+    Width = 218
+    Height = 47
+    Hint = ''
+    TabOrder = 5
+  end
+  object UnimLabel2: TUnimLabel
+    Left = 7
+    Top = 160
+    Width = 89
+    Height = 32
+    Hint = ''
+    AutoSize = False
+    Caption = 'PARA:'
+    ParentFont = False
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Style = [fsBold]
+  end
+  object UnimSelect2: TUnimSelect
+    Left = 102
+    Top = 160
+    Width = 218
+    Height = 41
+    Hint = ''
+    TabOrder = 9
+  end
+  object UnimLabel4: TUnimLabel
+    Left = 88
+    Top = 265
+    Width = 121
+    Height = 28
+    Hint = ''
+    AutoSize = False
+    Caption = 'HISTORICO:'
+    ParentFont = False
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Style = [fsBold]
+  end
+  object DbEditHistorico: TUnimDBEdit
+    Left = 40
+    Top = 305
+    Width = 256
+    Height = 47
+    Hint = ''
+    DataField = 'HISTORICO'
+    DataSource = SourceCaixaMov
+    TabOrder = 3
+  end
+  object DbeditValor: TUnimDBEdit
+    Left = 134
+    Top = 352
+    Width = 162
+    Height = 47
+    Hint = ''
+    DataField = 'VALOR'
+    DataSource = SourceCaixaMov
+    TabOrder = 2
+  end
+  object UnimLabel3: TUnimLabel
+    Left = 24
+    Top = 358
+    Width = 104
+    Height = 41
+    Hint = ''
+    AutoSize = False
+    Caption = 'VALOR:'
+    ParentFont = False
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Style = [fsBold]
+  end
+  object BtnSalvarTransf: TUnimBitBtn
+    Left = 40
+    Top = 405
+    Width = 256
+    Height = 47
+    Hint = ''
+    Caption = 'TRANSFERIR'
+    Font.Color = clBlack
+    Font.Style = [fsBold]
+    OnClick = BtnSalvarTransfClick
+  end
+  object SQLQuery1: TSQLQuery
+    DataSource = DataSource1
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from conta_movimento')
+    Left = 80
+    Top = 416
+    object SQLQuery1ID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object SQLQuery1DESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+    end
+    object SQLQuery1EMPRESA: TIntegerField
+      FieldName = 'EMPRESA'
+      Required = True
+    end
+    object SQLQuery1SALDO: TFloatField
+      FieldName = 'SALDO'
+    end
+    object SQLQuery1NAO_EXIBIR_REL: TStringField
+      FieldName = 'NAO_EXIBIR_REL'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 152
+    Top = 416
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 208
+    Top = 416
+    object ClientDataSet1ID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object ClientDataSet1DESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+    end
+    object ClientDataSet1EMPRESA: TIntegerField
+      FieldName = 'EMPRESA'
+      Required = True
+    end
+    object ClientDataSet1SALDO: TFloatField
+      FieldName = 'SALDO'
+    end
+    object ClientDataSet1NAO_EXIBIR_REL: TStringField
+      FieldName = 'NAO_EXIBIR_REL'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 264
+    Top = 416
+  end
+  object QueryCaixaMov: TSQLQuery
+    DataSource = SourceCaixaMov
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from caixa_mov'
+      'where data_mov = current_date')
+    Left = 72
+    Top = 64
+    object QueryCaixaMovID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QueryCaixaMovID_CAIXA: TIntegerField
+      FieldName = 'ID_CAIXA'
+      Required = True
+    end
+    object QueryCaixaMovDATA_MOV: TSQLTimeStampField
+      FieldName = 'DATA_MOV'
+    end
+    object QueryCaixaMovHISTORICO: TStringField
+      FieldName = 'HISTORICO'
+      Size = 50
+    end
+    object QueryCaixaMovORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Size = 40
+    end
+    object QueryCaixaMovDC: TStringField
+      FieldName = 'DC'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryCaixaMovVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object QueryCaixaMovIDFUNC: TIntegerField
+      FieldName = 'IDFUNC'
+      Required = True
+    end
+    object QueryCaixaMovSALDO_ANTERIOR: TFloatField
+      FieldName = 'SALDO_ANTERIOR'
+    end
+    object QueryCaixaMovIDPLANO: TIntegerField
+      FieldName = 'IDPLANO'
+    end
+    object QueryCaixaMovIDSUBPLANO: TIntegerField
+      FieldName = 'IDSUBPLANO'
+    end
+    object QueryCaixaMovDESC_SUBPLANO: TStringField
+      FieldName = 'DESC_SUBPLANO'
+      Size = 40
+    end
+    object QueryCaixaMovSALDO_POSTERIOR: TFloatField
+      FieldName = 'SALDO_POSTERIOR'
+    end
+    object QueryCaixaMovHORA_MOV: TSQLTimeStampField
+      FieldName = 'HORA_MOV'
+    end
+  end
+  object ProviderCaixaMov: TDataSetProvider
+    DataSet = QueryCaixaMov
+    Left = 160
+    Top = 56
+  end
+  object SourceCaixaMov: TDataSource
+    DataSet = DataSetCaixaMov
+    Left = 296
+    Top = 56
+  end
+  object QueryFunc: TSQLQuery
+    DataSource = SourceFunc
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      'select * from funcionario')
+    Left = 88
+    Top = 200
+    object QueryFuncID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object QueryFuncNOME: TStringField
+      FieldName = 'NOME'
+      Size = 60
+    end
+    object QueryFuncENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Size = 60
+    end
+    object QueryFuncNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Size = 10
+    end
+    object QueryFuncBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Size = 50
+    end
+    object QueryFuncCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Size = 30
+    end
+    object QueryFuncCEP: TStringField
+      FieldName = 'CEP'
+      Size = 10
+    end
+    object QueryFuncUF: TStringField
+      FieldName = 'UF'
+      FixedChar = True
+      Size = 2
+    end
+    object QueryFuncTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 25
+    end
+    object QueryFuncTELEFAX: TStringField
+      FieldName = 'TELEFAX'
+      Size = 25
+    end
+    object QueryFuncCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 25
+    end
+    object QueryFuncCNPJ_CPF: TStringField
+      FieldName = 'CNPJ_CPF'
+    end
+    object QueryFuncINSC_RG: TStringField
+      FieldName = 'INSC_RG'
+    end
+    object QueryFuncFILIACAO_PAI: TStringField
+      FieldName = 'FILIACAO_PAI'
+      Size = 60
+    end
+    object QueryFuncFILIACAO_MAE: TStringField
+      FieldName = 'FILIACAO_MAE'
+      Size = 60
+    end
+    object QueryFuncDATA_NASC: TSQLTimeStampField
+      FieldName = 'DATA_NASC'
+    end
+    object QueryFuncDATA_ADMISSAO: TSQLTimeStampField
+      FieldName = 'DATA_ADMISSAO'
+    end
+    object QueryFuncDATA_DEMISSAO: TSQLTimeStampField
+      FieldName = 'DATA_DEMISSAO'
+    end
+    object QueryFuncSALARIO: TFloatField
+      FieldName = 'SALARIO'
+    end
+    object QueryFuncCOMISSAO: TStringField
+      FieldName = 'COMISSAO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryFuncPERC_COMISSAO: TFloatField
+      FieldName = 'PERC_COMISSAO'
+    end
+    object QueryFuncATIVO: TStringField
+      FieldName = 'ATIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object QueryFuncOBSERVACOES: TMemoField
+      FieldName = 'OBSERVACOES'
+      BlobType = ftMemo
+      Size = 1
+    end
+    object QueryFuncEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 200
+    end
+    object QueryFuncTIPO: TIntegerField
+      FieldName = 'TIPO'
+    end
+    object QueryFuncTIPO_COM: TIntegerField
+      FieldName = 'TIPO_COM'
+    end
+    object QueryFuncCONTA_MOVIMENTO: TIntegerField
+      FieldName = 'CONTA_MOVIMENTO'
+    end
+  end
+  object ProviderFunc: TDataSetProvider
+    DataSet = QueryFunc
+    Left = 144
+    Top = 200
+  end
+  object SourceFunc: TDataSource
+    DataSet = ClientDatasetFunc
+    Left = 280
+    Top = 200
+  end
+  object ClientDatasetFunc: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderFunc'
+    Left = 216
+    Top = 200
+    object ClientDatasetFuncID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object ClientDatasetFuncNOME: TStringField
+      FieldName = 'NOME'
+      Size = 60
+    end
+    object ClientDatasetFuncENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Size = 60
+    end
+    object ClientDatasetFuncNUMERO: TStringField
+      FieldName = 'NUMERO'
+      Size = 10
+    end
+    object ClientDatasetFuncBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Size = 50
+    end
+    object ClientDatasetFuncCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Size = 30
+    end
+    object ClientDatasetFuncCEP: TStringField
+      FieldName = 'CEP'
+      Size = 10
+    end
+    object ClientDatasetFuncUF: TStringField
+      FieldName = 'UF'
+      FixedChar = True
+      Size = 2
+    end
+    object ClientDatasetFuncTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 25
+    end
+    object ClientDatasetFuncTELEFAX: TStringField
+      FieldName = 'TELEFAX'
+      Size = 25
+    end
+    object ClientDatasetFuncCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 25
+    end
+    object ClientDatasetFuncCNPJ_CPF: TStringField
+      FieldName = 'CNPJ_CPF'
+    end
+    object ClientDatasetFuncINSC_RG: TStringField
+      FieldName = 'INSC_RG'
+    end
+    object ClientDatasetFuncFILIACAO_PAI: TStringField
+      FieldName = 'FILIACAO_PAI'
+      Size = 60
+    end
+    object ClientDatasetFuncFILIACAO_MAE: TStringField
+      FieldName = 'FILIACAO_MAE'
+      Size = 60
+    end
+    object ClientDatasetFuncDATA_NASC: TSQLTimeStampField
+      FieldName = 'DATA_NASC'
+    end
+    object ClientDatasetFuncDATA_ADMISSAO: TSQLTimeStampField
+      FieldName = 'DATA_ADMISSAO'
+    end
+    object ClientDatasetFuncDATA_DEMISSAO: TSQLTimeStampField
+      FieldName = 'DATA_DEMISSAO'
+    end
+    object ClientDatasetFuncSALARIO: TFloatField
+      FieldName = 'SALARIO'
+    end
+    object ClientDatasetFuncCOMISSAO: TStringField
+      FieldName = 'COMISSAO'
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDatasetFuncPERC_COMISSAO: TFloatField
+      FieldName = 'PERC_COMISSAO'
+    end
+    object ClientDatasetFuncATIVO: TStringField
+      FieldName = 'ATIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDatasetFuncOBSERVACOES: TMemoField
+      FieldName = 'OBSERVACOES'
+      BlobType = ftMemo
+      Size = 1
+    end
+    object ClientDatasetFuncEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 200
+    end
+    object ClientDatasetFuncTIPO: TIntegerField
+      FieldName = 'TIPO'
+    end
+    object ClientDatasetFuncTIPO_COM: TIntegerField
+      FieldName = 'TIPO_COM'
+    end
+    object ClientDatasetFuncCONTA_MOVIMENTO: TIntegerField
+      FieldName = 'CONTA_MOVIMENTO'
+    end
+  end
+  object DataSetCaixaMov: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderCaixaMov'
+    Left = 232
+    Top = 56
+    object DataSetCaixaMovID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object DataSetCaixaMovID_CAIXA: TIntegerField
+      FieldName = 'ID_CAIXA'
+      Required = True
+    end
+    object DataSetCaixaMovDATA_MOV: TSQLTimeStampField
+      FieldName = 'DATA_MOV'
+    end
+    object DataSetCaixaMovHISTORICO: TStringField
+      FieldName = 'HISTORICO'
+      Size = 50
+    end
+    object DataSetCaixaMovORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Size = 40
+    end
+    object DataSetCaixaMovDC: TStringField
+      FieldName = 'DC'
+      FixedChar = True
+      Size = 1
+    end
+    object DataSetCaixaMovVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object DataSetCaixaMovIDFUNC: TIntegerField
+      FieldName = 'IDFUNC'
+      Required = True
+    end
+    object DataSetCaixaMovSALDO_ANTERIOR: TFloatField
+      FieldName = 'SALDO_ANTERIOR'
+    end
+    object DataSetCaixaMovIDPLANO: TIntegerField
+      FieldName = 'IDPLANO'
+    end
+    object DataSetCaixaMovIDSUBPLANO: TIntegerField
+      FieldName = 'IDSUBPLANO'
+    end
+    object DataSetCaixaMovDESC_SUBPLANO: TStringField
+      FieldName = 'DESC_SUBPLANO'
+      Size = 40
+    end
+    object DataSetCaixaMovSALDO_POSTERIOR: TFloatField
+      FieldName = 'SALDO_POSTERIOR'
+    end
+    object DataSetCaixaMovHORA_MOV: TSQLTimeStampField
+      FieldName = 'HORA_MOV'
+    end
+  end
+  object QueryConfig: TSQLQuery
+    DataSource = SourceConfig
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'select * from config_global')
+    Left = 88
+    Top = 248
+    object QueryConfigID_EMPRESA: TIntegerField
+      FieldName = 'ID_EMPRESA'
+      Required = True
+    end
+    object QueryConfigPERC_LUCRO_VAREJO: TFloatField
+      FieldName = 'PERC_LUCRO_VAREJO'
+    end
+    object QueryConfigCUSTO_FIXO: TFloatField
+      FieldName = 'CUSTO_FIXO'
+    end
+    object QueryConfigPERC_LUCRO_ATACADO: TFloatField
+      FieldName = 'PERC_LUCRO_ATACADO'
+    end
+    object QueryConfigCOMISSAO: TFloatField
+      FieldName = 'COMISSAO'
+    end
+    object QueryConfigFRETE: TFloatField
+      FieldName = 'FRETE'
+    end
+    object QueryConfigOUTROS_IMPOSTOS: TFloatField
+      FieldName = 'OUTROS_IMPOSTOS'
+    end
+    object QueryConfigFABRICANTE: TStringField
+      FieldName = 'FABRICANTE'
+    end
+    object QueryConfigMARCA: TStringField
+      FieldName = 'MARCA'
+    end
+    object QueryConfigMODELO: TStringField
+      FieldName = 'MODELO'
+    end
+    object QueryConfigNUMERO: TStringField
+      FieldName = 'NUMERO'
+    end
+    object QueryConfigSERIE: TStringField
+      FieldName = 'SERIE'
+    end
+    object QueryConfigVOLTS: TStringField
+      FieldName = 'VOLTS'
+    end
+    object QueryConfigTDDINHEIRO: TIntegerField
+      FieldName = 'TDDINHEIRO'
+    end
+    object QueryConfigTDCARTAO: TIntegerField
+      FieldName = 'TDCARTAO'
+    end
+    object QueryConfigTDCHEQUE: TIntegerField
+      FieldName = 'TDCHEQUE'
+    end
+    object QueryConfigTDOUTRAS: TIntegerField
+      FieldName = 'TDOUTRAS'
+    end
+    object QueryConfigSIMPLES: TFloatField
+      FieldName = 'SIMPLES'
+    end
+    object QueryConfigICMS: TFloatField
+      FieldName = 'ICMS'
+    end
+    object QueryConfigIDPLANODINHEIRO: TIntegerField
+      FieldName = 'IDPLANODINHEIRO'
+    end
+    object QueryConfigIDPLANOCHEQUE: TIntegerField
+      FieldName = 'IDPLANOCHEQUE'
+    end
+    object QueryConfigIDPLANOCARTAO: TIntegerField
+      FieldName = 'IDPLANOCARTAO'
+    end
+    object QueryConfigIDPLANOCARTEIRA: TIntegerField
+      FieldName = 'IDPLANOCARTEIRA'
+    end
+    object QueryConfigIDPLANOCARNE: TIntegerField
+      FieldName = 'IDPLANOCARNE'
+    end
+    object QueryConfigIDPLANOBOLETO: TIntegerField
+      FieldName = 'IDPLANOBOLETO'
+    end
+    object QueryConfigIDPLANOOUTROS: TIntegerField
+      FieldName = 'IDPLANOOUTROS'
+    end
+    object QueryConfigIDPLANOGERAL: TIntegerField
+      FieldName = 'IDPLANOGERAL'
+    end
+    object QueryConfigIDSUBPLANODINHEIRO: TIntegerField
+      FieldName = 'IDSUBPLANODINHEIRO'
+    end
+    object QueryConfigIDSUBPLANOCHEQUE: TIntegerField
+      FieldName = 'IDSUBPLANOCHEQUE'
+    end
+    object QueryConfigIDSUBPLANOCARTAO: TIntegerField
+      FieldName = 'IDSUBPLANOCARTAO'
+    end
+    object QueryConfigIDSUBPLANOCARTEIRA: TIntegerField
+      FieldName = 'IDSUBPLANOCARTEIRA'
+    end
+    object QueryConfigIDSUBPLANOCARNE: TIntegerField
+      FieldName = 'IDSUBPLANOCARNE'
+    end
+    object QueryConfigIDSUBPLANOBOLETO: TIntegerField
+      FieldName = 'IDSUBPLANOBOLETO'
+    end
+    object QueryConfigIDSUBPLANOOUTROS: TIntegerField
+      FieldName = 'IDSUBPLANOOUTROS'
+    end
+    object QueryConfigIDSUBPLANOGERAL: TIntegerField
+      FieldName = 'IDSUBPLANOGERAL'
+    end
+    object QueryConfigPV_PIS: TFloatField
+      FieldName = 'PV_PIS'
+    end
+    object QueryConfigPV_COFINS: TFloatField
+      FieldName = 'PV_COFINS'
+    end
+    object QueryConfigPV_CSLL: TFloatField
+      FieldName = 'PV_CSLL'
+    end
+    object QueryConfigPV_IR: TFloatField
+      FieldName = 'PV_IR'
+    end
+    object QueryConfigPV_DESCONTO_ENT: TFloatField
+      FieldName = 'PV_DESCONTO_ENT'
+    end
+    object QueryConfigPV_FINANCEIRO_ENT: TFloatField
+      FieldName = 'PV_FINANCEIRO_ENT'
+    end
+    object QueryConfigPV_ICMS_ENT: TFloatField
+      FieldName = 'PV_ICMS_ENT'
+    end
+    object QueryConfigPV_IPI_ENT: TFloatField
+      FieldName = 'PV_IPI_ENT'
+    end
+    object QueryConfigPV_FRETE_ENT: TFloatField
+      FieldName = 'PV_FRETE_ENT'
+    end
+    object QueryConfigPV_OUTROS_ENT: TFloatField
+      FieldName = 'PV_OUTROS_ENT'
+    end
+    object QueryConfigUTILIZA_DESCONTO_ITEM: TStringField
+      FieldName = 'UTILIZA_DESCONTO_ITEM'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigUTILIZA_DESCONTOMAXIMO_ITEM: TStringField
+      FieldName = 'UTILIZA_DESCONTOMAXIMO_ITEM'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigN_REIMPRESSAO: TStringField
+      FieldName = 'N_REIMPRESSAO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigUTILIZA_GRADE_PRODUTOS: TStringField
+      FieldName = 'UTILIZA_GRADE_PRODUTOS'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVER_PROD_S_PRECOVENDA: TStringField
+      FieldName = 'VER_PROD_S_PRECOVENDA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIDPLANOTRANSFERENCIA: TIntegerField
+      FieldName = 'IDPLANOTRANSFERENCIA'
+    end
+    object QueryConfigIDSUBPLANOTRANSFERENCIA: TIntegerField
+      FieldName = 'IDSUBPLANOTRANSFERENCIA'
+    end
+    object QueryConfigUTILIZA_VARIAS_FORMAPAG: TStringField
+      FieldName = 'UTILIZA_VARIAS_FORMAPAG'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVINCULA_FINAN_PEDIDONOTA: TStringField
+      FieldName = 'VINCULA_FINAN_PEDIDONOTA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigAPARECER_CONSIGNADO_CUPOM: TStringField
+      FieldName = 'APARECER_CONSIGNADO_CUPOM'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIDCLASSIFICACAOGERAPEDIDO: TIntegerField
+      FieldName = 'IDCLASSIFICACAOGERAPEDIDO'
+    end
+    object QueryConfigBLOQUEIA_RETRPED_LIQ: TStringField
+      FieldName = 'BLOQUEIA_RETRPED_LIQ'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigDES_PESQUISADINAMICA: TStringField
+      FieldName = 'DES_PESQUISADINAMICA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigEDIT_DESC_PRODUTO_PADRAO: TStringField
+      FieldName = 'EDIT_DESC_PRODUTO_PADRAO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_CALCULA_ICMS_SINTEGRA: TStringField
+      FieldName = 'NAO_CALCULA_ICMS_SINTEGRA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigPREENCHE_DADOS_PADRAO: TStringField
+      FieldName = 'PREENCHE_DADOS_PADRAO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigAGRUPA_ITENS_PEDIDO: TStringField
+      FieldName = 'AGRUPA_ITENS_PEDIDO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIDPLANOCANCELAMENTO: TIntegerField
+      FieldName = 'IDPLANOCANCELAMENTO'
+    end
+    object QueryConfigIDSUBPLANOCANCELAMENTO: TIntegerField
+      FieldName = 'IDSUBPLANOCANCELAMENTO'
+    end
+    object QueryConfigIMP_N_PEDIDO_CUPOMFISCAL: TStringField
+      FieldName = 'IMP_N_PEDIDO_CUPOMFISCAL'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigCONTAFIXANABAIXADECONTAS: TStringField
+      FieldName = 'CONTAFIXANABAIXADECONTAS'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVINCULA_REFERENCIA_EAN13: TStringField
+      FieldName = 'VINCULA_REFERENCIA_EAN13'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVISUALIZA_VENDAS_CAIXA: TStringField
+      FieldName = 'VISUALIZA_VENDAS_CAIXA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_UTILIZA_EXCECAO_ISENTO: TStringField
+      FieldName = 'NAO_UTILIZA_EXCECAO_ISENTO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigBLOQUEIA_CANCELAMENTO_MEIOVEND: TStringField
+      FieldName = 'BLOQUEIA_CANCELAMENTO_MEIOVEND'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigFECHAR_CUPOM_REIMPRESSAO: TStringField
+      FieldName = 'FECHAR_CUPOM_REIMPRESSAO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigEAN_PRODUTO: TIntegerField
+      FieldName = 'EAN_PRODUTO'
+    end
+    object QueryConfigUTILIZA_COD_BAL_UNID: TStringField
+      FieldName = 'UTILIZA_COD_BAL_UNID'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigTIPO_IMP_PADRAO_RD: TStringField
+      FieldName = 'TIPO_IMP_PADRAO_RD'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIMPRIME_COMP_QUIT: TStringField
+      FieldName = 'IMPRIME_COMP_QUIT'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigINFORMA_OBS_CANCELAMENTO_PDV: TStringField
+      FieldName = 'INFORMA_OBS_CANCELAMENTO_PDV'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVENDA_ATACADOVAREJO_UNICA: TStringField
+      FieldName = 'VENDA_ATACADOVAREJO_UNICA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigQTDE_VIAS_PEDIDO: TIntegerField
+      FieldName = 'QTDE_VIAS_PEDIDO'
+    end
+    object QueryConfigID_CLASSIFICACAO_COTACAO: TIntegerField
+      FieldName = 'ID_CLASSIFICACAO_COTACAO'
+    end
+    object QueryConfigID_CONTROLE_COTACAO: TIntegerField
+      FieldName = 'ID_CONTROLE_COTACAO'
+    end
+    object QueryConfigNAO_EXIBE_MSG_VAREJOATACADO: TStringField
+      FieldName = 'NAO_EXIBE_MSG_VAREJOATACADO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigPERMITE_ESCOLHER_FP_TELASUP: TStringField
+      FieldName = 'PERMITE_ESCOLHER_FP_TELASUP'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIMPRIMIR_DOC_AUX_APOS_VENDA: TStringField
+      FieldName = 'IMPRIMIR_DOC_AUX_APOS_VENDA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVISUALIZA_PRECO_ATE_DESCONTO: TStringField
+      FieldName = 'VISUALIZA_PRECO_ATE_DESCONTO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIMPRIME_PEDIDO_FIN_VENDA: TStringField
+      FieldName = 'IMPRIME_PEDIDO_FIN_VENDA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_PERMITE_ENTRADA_EAN_XML: TStringField
+      FieldName = 'NAO_PERMITE_ENTRADA_EAN_XML'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigQTDELINHASPEDIDOPEQUENO: TIntegerField
+      FieldName = 'QTDELINHASPEDIDOPEQUENO'
+    end
+    object QueryConfigIMPRIME_ECF_REMOTO: TStringField
+      FieldName = 'IMPRIME_ECF_REMOTO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigATU_JUROS_AUTOMATICO: TStringField
+      FieldName = 'ATU_JUROS_AUTOMATICO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigCODIGO_SEQ_ALFA: TStringField
+      FieldName = 'CODIGO_SEQ_ALFA'
+      Size = 3
+    end
+    object QueryConfigPEDIDO_MATRICIAL_GRANDE: TStringField
+      FieldName = 'PEDIDO_MATRICIAL_GRANDE'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVIS_VENDASPED_TELASUP: TStringField
+      FieldName = 'VIS_VENDASPED_TELASUP'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigTIPO_REGIME: TIntegerField
+      FieldName = 'TIPO_REGIME'
+    end
+    object QueryConfigPERC_PIS: TFloatField
+      FieldName = 'PERC_PIS'
+    end
+    object QueryConfigVALOR_COFINS: TFloatField
+      FieldName = 'VALOR_COFINS'
+    end
+    object QueryConfigPERC_JUROS: TFloatField
+      FieldName = 'PERC_JUROS'
+    end
+    object QueryConfigVALOR_MULTA: TFloatField
+      FieldName = 'VALOR_MULTA'
+    end
+    object QueryConfigAGRUPA_ITENS_GERA_NF: TStringField
+      FieldName = 'AGRUPA_ITENS_GERA_NF'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigID_CONTATO: TIntegerField
+      FieldName = 'ID_CONTATO'
+    end
+    object QueryConfigATUALIZA_PESQ_PRODUTOS: TStringField
+      FieldName = 'ATUALIZA_PESQ_PRODUTOS'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigCPF_CLIENTE_OBRIGATORIO: TStringField
+      FieldName = 'CPF_CLIENTE_OBRIGATORIO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_AGRP_ITENS_ACERTOCONSI: TStringField
+      FieldName = 'NAO_AGRP_ITENS_ACERTOCONSI'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigLER_DADOS_APOSREDZ: TStringField
+      FieldName = 'LER_DADOS_APOSREDZ'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigUTILIZA_CREDITO_PREPAGO: TStringField
+      FieldName = 'UTILIZA_CREDITO_PREPAGO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigEXIBE_SALDOPOSTERIOR_CAIXA: TStringField
+      FieldName = 'EXIBE_SALDOPOSTERIOR_CAIXA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigINFORMA_SENHA_OPCIONAL: TStringField
+      FieldName = 'INFORMA_SENHA_OPCIONAL'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigHAB_FT_BAIXA_TIPODOC: TStringField
+      FieldName = 'HAB_FT_BAIXA_TIPODOC'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigHAB_FT_BAIXA_SERIE: TStringField
+      FieldName = 'HAB_FT_BAIXA_SERIE'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigHAB_FT_BAIXA_DTVENC: TStringField
+      FieldName = 'HAB_FT_BAIXA_DTVENC'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigHAB_FT_BAIXA_TIPO: TStringField
+      FieldName = 'HAB_FT_BAIXA_TIPO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVALOR_OUTRAS_SINTEGRA: TStringField
+      FieldName = 'VALOR_OUTRAS_SINTEGRA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigTENTA_RECUPERAR_VENDA: TStringField
+      FieldName = 'TENTA_RECUPERAR_VENDA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigCHECA_ESTOQUE_FINALIZAR: TStringField
+      FieldName = 'CHECA_ESTOQUE_FINALIZAR'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigTAXA_ADM: TFloatField
+      FieldName = 'TAXA_ADM'
+    end
+    object QueryConfigUTILIZA_CATRACA: TStringField
+      FieldName = 'UTILIZA_CATRACA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIP_CATRACA: TStringField
+      FieldName = 'IP_CATRACA'
+    end
+    object QueryConfigPORTA_CATRACA: TStringField
+      FieldName = 'PORTA_CATRACA'
+      Size = 6
+    end
+    object QueryConfigDIAS_PARA_BLOQUEIO: TIntegerField
+      FieldName = 'DIAS_PARA_BLOQUEIO'
+    end
+    object QueryConfigMODELO_CARNE: TStringField
+      FieldName = 'MODELO_CARNE'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_UTILIZA_VENDEDOR_CLIENTE: TStringField
+      FieldName = 'NAO_UTILIZA_VENDEDOR_CLIENTE'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigMOV_PROD_COMPOSTO_ENT_SAI: TStringField
+      FieldName = 'MOV_PROD_COMPOSTO_ENT_SAI'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigMSG_CUPOM: TStringField
+      FieldName = 'MSG_CUPOM'
+      Size = 200
+    end
+    object QueryConfigIMPR_MSG_ACRES: TStringField
+      FieldName = 'IMPR_MSG_ACRES'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigACRESC_PERC: TFloatField
+      FieldName = 'ACRESC_PERC'
+    end
+    object QueryConfigOBRIGA_VENDA_CARTAO: TStringField
+      FieldName = 'OBRIGA_VENDA_CARTAO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigCUPOM_EM_LOTE: TStringField
+      FieldName = 'CUPOM_EM_LOTE'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigVERIFICA_DEBITO_CLIENTE_PED: TStringField
+      FieldName = 'VERIFICA_DEBITO_CLIENTE_PED'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigIMP_OBS_PEDIDO_CUPOM: TStringField
+      FieldName = 'IMP_OBS_PEDIDO_CUPOM'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_CALC_ICMSSAIDA_SINTEGRA: TStringField
+      FieldName = 'NAO_CALC_ICMSSAIDA_SINTEGRA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_ZERAVALOR5929_SINTEGRA: TStringField
+      FieldName = 'NAO_ZERAVALOR5929_SINTEGRA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigPRECO_ATACADO_FIXO: TStringField
+      FieldName = 'PRECO_ATACADO_FIXO'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigNAO_CALCULA_ICMSREG54_SINTEGRA: TStringField
+      FieldName = 'NAO_CALCULA_ICMSREG54_SINTEGRA'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigUTILIZA_PEDIDO_AUX: TStringField
+      FieldName = 'UTILIZA_PEDIDO_AUX'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigQTDE_VENDAS_F8: TIntegerField
+      FieldName = 'QTDE_VENDAS_F8'
+    end
+    object QueryConfigIMPRIMIR_LIMITE_COMP: TStringField
+      FieldName = 'IMPRIMIR_LIMITE_COMP'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigOBSERVACAO_PEDIDO: TStringField
+      FieldName = 'OBSERVACAO_PEDIDO'
+      Size = 300
+    end
+    object QueryConfigPERC_ACRESC_TIPODOC2: TFloatField
+      FieldName = 'PERC_ACRESC_TIPODOC2'
+    end
+    object QueryConfigPERC_ACRESC_TIPODOC6: TFloatField
+      FieldName = 'PERC_ACRESC_TIPODOC6'
+    end
+    object QueryConfigPERC_ACRESC_TIPODOC3: TFloatField
+      FieldName = 'PERC_ACRESC_TIPODOC3'
+    end
+    object QueryConfigCODIGO_SEQ_GRADE: TStringField
+      FieldName = 'CODIGO_SEQ_GRADE'
+      FixedChar = True
+      Size = 1
+    end
+    object QueryConfigMOV_EST_PRODCOMP: TStringField
+      FieldName = 'MOV_EST_PRODCOMP'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object ProviderConfig: TDataSetProvider
+    DataSet = QueryConfig
+    Left = 152
+    Top = 256
+  end
+  object DataSetConfig: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'ProviderCaixaMov'
+    Left = 208
+    Top = 256
+    object DataSetConfigID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object DataSetConfigID_CAIXA: TIntegerField
+      FieldName = 'ID_CAIXA'
+      Required = True
+    end
+    object DataSetConfigDATA_MOV: TSQLTimeStampField
+      FieldName = 'DATA_MOV'
+    end
+    object DataSetConfigHISTORICO: TStringField
+      FieldName = 'HISTORICO'
+      Size = 50
+    end
+    object DataSetConfigORIGEM: TStringField
+      FieldName = 'ORIGEM'
+      Size = 40
+    end
+    object DataSetConfigDC: TStringField
+      FieldName = 'DC'
+      FixedChar = True
+      Size = 1
+    end
+    object DataSetConfigVALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object DataSetConfigIDFUNC: TIntegerField
+      FieldName = 'IDFUNC'
+      Required = True
+    end
+    object DataSetConfigSALDO_ANTERIOR: TFloatField
+      FieldName = 'SALDO_ANTERIOR'
+    end
+    object DataSetConfigIDPLANO: TIntegerField
+      FieldName = 'IDPLANO'
+    end
+    object DataSetConfigIDSUBPLANO: TIntegerField
+      FieldName = 'IDSUBPLANO'
+    end
+    object DataSetConfigDESC_SUBPLANO: TStringField
+      FieldName = 'DESC_SUBPLANO'
+      Size = 40
+    end
+    object DataSetConfigSALDO_POSTERIOR: TFloatField
+      FieldName = 'SALDO_POSTERIOR'
+    end
+    object DataSetConfigHORA_MOV: TSQLTimeStampField
+      FieldName = 'HORA_MOV'
+    end
+  end
+  object SourceConfig: TDataSource
+    DataSet = DataSetConfig
+    Left = 272
+    Top = 256
+  end
+  object ClientDataSet2: TClientDataSet
+    Aggregates = <>
+    MasterSource = DataSource1
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 328
+    Top = 368
+    object IntegerField1: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object StringField1: TStringField
+      FieldName = 'DESCRICAO'
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'EMPRESA'
+      Required = True
+    end
+    object FloatField1: TFloatField
+      FieldName = 'SALDO'
+    end
+    object StringField2: TStringField
+      FieldName = 'NAO_EXIBIR_REL'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = ClientDataSet2
+    Left = 328
+    Top = 328
+  end
+end
